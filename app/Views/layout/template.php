@@ -93,6 +93,7 @@
   <script src="/bundles/select2/dist/js/select2.full.min.js"></script>
   <script src="/bundles/jquery-selectric/jquery.selectric.min.js"></script>
   <!-- Page Specific JS File -->
+  <script src="/bundles/sweetalert/sweetalert.min.js"></script>
   <script src="/js/page/index.js"></script>
   <script src="/js/page/datatables.js"></script>
   <!-- Template JS File -->

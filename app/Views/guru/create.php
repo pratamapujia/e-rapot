@@ -62,7 +62,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Tambah Data</button>
+              <button type="submit" class="btn btn-primary" id="swal-2">Tambah Data</button>
             </div>
           </form>
         </div>

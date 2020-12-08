@@ -61,6 +61,7 @@ class Guru extends BaseController
       'foto_guru' => $this->request->getPost('foto_guru')
     ]);
 
+    session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
     return redirect()->to('/guru');
   }
 }
