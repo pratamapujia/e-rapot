@@ -10,30 +10,30 @@
           <div class="card author-box card-primary">
             <div class="card-body">
               <div class="author-box-left"><br>
-                <img alt="image" src="/img/fguru/<?= $guru['foto_guru']; ?>" class="rounded-circle author-box-picture" style="width: 110px; height: 110px;">
+                <img alt="image" src="/img/fsiswa/<?= $siswa['foto_siswa']; ?>" class="rounded-circle author-box-picture" style="width: 110px; height: 110px;">
                 <div class="clearfix"></div>
               </div>
               <div class="author-box-details">
                 <div class="author-box-name">
-                  <h4><?= $guru['nama_guru']; ?></h4>
+                  <h4><?= $siswa['nama_siswa']; ?></h4>
                 </div>
-                <div class="author-box-job" style="color: red;"><?= $guru['status']; ?></div><br>
+                <div class="author-box-job" style="color: red;"><?= $siswa['nis']; ?></div><br>
                 <div class="font-weight-bold">
-                  <b>NIP : </b> <?= $guru['nip']; ?>
-                </div>
-                <div class="font-weight-bold">
-                  <b>PROFESI : </b> <?= $guru['profesi']; ?>
+                  <b>NISN : </b> <?= $siswa['nisn']; ?>
                 </div>
                 <div class="font-weight-bold">
-                  <b>NOMER TELEPON : </b> <?= $guru['telepon_guru']; ?>
+                  <b>TTL : </b> <?= $siswa['tempat_lahir']; ?> <?= $siswa['tanggal_lahir']; ?>
                 </div>
                 <div class="font-weight-bold">
-                  <b>ALAMAT : </b> <?= $guru['alamat_guru']; ?>
+                  <b>NOMER TELEPON : </b> <?= $siswa['telepon_siswa']; ?>
+                </div>
+                <div class="font-weight-bold">
+                  <b>ALAMAT : </b> <?= $siswa['alamat_siswa']; ?>
                 </div>
               </div>
             </div>
             <div class="card-footer text-right">
-              <a href="/guru" class="btn btn-sm btn-primary" type="button">Kembali</a>
+              <a href="/siswa" class="btn btn-sm btn-primary" type="button">Kembali</a>
             </div>
           </div>
         </div>

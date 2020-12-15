@@ -77,7 +77,7 @@
   </div>
   <footer class="main-footer">
     <div class="footer-left">
-      E-RAPOT | <a href="https://github.com/pratamapujia" target="_blank">Sumber Asli</a> dikembangkan oleh <a target="_blank" href="https://pujiistiani123@gmail.com">Pratama Puji A</a>
+      E-RAPOT | Dibuat oleh <a target="_blank" href="https://github.com/pratamapujia">Pratama Puji A</a> <a href="https://github.com/pratamapujia/e-rapot" target="_blank">Github</a>
     </div>
     <div class="footer-right">
       Waktu proses {elapsed_time} detik. &copy; 2020

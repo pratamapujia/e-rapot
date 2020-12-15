@@ -21,74 +21,40 @@
                 <thead>
                   <tr>
                     <th class="text-center">
-                      #
+                      ID Siswa
                     </th>
                     <th>Profile</th>
-                    <th>ID Siswa</th>
                     <th>NIS</th>
-                    <th>NISN</th>
                     <th>Nama Siswa</th>
                     <th>Jenis Kelamin</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
                     <th>Agama</th>
                     <th>Alamat Siswa</th>
                     <th>Telepon Siswa</th>
-                    <th>Nama Ayah</th>
-                    <th>Pekerjaan Ayah</th>
-                    <th>Nama Ibu</th>
-                    <th>Pekerjaan Ibu</th>
-                    <th>Alamat Ortu</th>
-                    <th>Telepon Ortu</th>
-                    <th>Nama Wali</th>
-                    <th>Pekerjaan Wali</th>
-                    <th>Alamat Wali</th>
-                    <th>Telepon Wali</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      1
-                    </td>
-                    <td>
-                      <img alt="image" src="assets/img/users/user-5.png" width="35">
-                    </td>
-                    <td>SWA00001</td>
-                    <td>0088121</td>
-                    <td>
-                      12098237123213
-                    </td>
-                    <td>Pratama Puji Ariyanto</td>
-                    <td>Laki-Laki</td>
-                    <td>Sidoarjo</td>
-                    <td>26-08-2000</td>
-                    <td>Islam</td>
-                    <td>Jl. Tropodo 1 Barat</td>
-                    <td>083830694069</td>
-                    <td>Budi Yanto</td>
-                    <td>Karyawan Swasta</td>
-                    <td>Puji Istiani</td>
-                    <td>Ibu Rumah Tangga</td>
-                    <td>Jl. Trpodo 1 Barat</td>
-                    <td>081553566510</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <div class="dropup">
-                        <button class="btn btn-lg" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item has-icon" href="#"><i class="fas fa-edit"></i> Edit</a>
-                          <a class="dropdown-item has-icon" href="#"><i class="fas fa-trash"></i> Hapus</a>
+                  <?php foreach ($siswa as $s) : ?>
+                    <tr>
+                      <td><?= $s['id_siswa']; ?></td>
+                      <td>
+                        <img alt="image" src="/img/fsiswa/<?= $s['foto_siswa']; ?>" width="35">
+                      </td>
+                      <td><?= $s['nis']; ?></td>
+                      <td><?= $s['nama_siswa']; ?></td>
+                      <td><?= $s['jk_siswa']; ?></td>
+                      <td><?= $s['agama']; ?></td>
+                      <td><?= $s['alamat_siswa']; ?></td>
+                      <td><?= $s['telepon_siswa']; ?></td>
+                      <td>
+                        <div class="btn-group mb-3 btn-group-sm" role="group">
+                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="bottom" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="bottom" title="Edit" href="#"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="bottom" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
             </div>

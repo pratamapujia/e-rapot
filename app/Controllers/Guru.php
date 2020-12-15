@@ -18,8 +18,6 @@ class Guru extends BaseController
       'title' => 'Guru',
       'guru' => $this->guruModel->getGuru()
     ];
-
-
     return view('guru/index', $data);
   }
 
