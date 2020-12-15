@@ -28,7 +28,16 @@
                   <b>NOMER TELEPON : </b> <?= $siswa['telepon_siswa']; ?>
                 </div>
                 <div class="font-weight-bold">
-                  <b>ALAMAT : </b> <?= $siswa['alamat_siswa']; ?>
+                  <b>NAMA AYAH : </b> <?= $siswa['nama_ayah']; ?>
+                </div>
+                <div class="font-weight-bold">
+                  <b>PEKERJAAN AYAH : </b> <?= $siswa['pekerjaan_ayah']; ?>
+                </div>
+                <div class="font-weight-bold">
+                  <b>NAMA IBU : </b> <?= $siswa['nama_ibu']; ?>
+                </div>
+                <div class="font-weight-bold">
+                  <b>PEKERJAAN IBU : </b> <?= $siswa['pekerjaan_ibu']; ?>
                 </div>
               </div>
             </div>
