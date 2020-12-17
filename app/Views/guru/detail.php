@@ -6,7 +6,7 @@
   <section class="section">
     <div class="section-body">
       <div class="row">
-        <div class="col-12 col-sm-12 col-lg-5">
+        <div class="col-12 col-sm-12 col-lg-7">
           <div class="card author-box card-primary">
             <div class="card-body">
               <div class="author-box-left"><br>
@@ -18,22 +18,36 @@
                   <h4><?= $guru['nama_guru']; ?></h4>
                 </div>
                 <div class="author-box-job" style="color: red;"><?= $guru['status']; ?></div><br>
-                <div class="font-weight-bold">
-                  <b>NIP : </b> <?= $guru['nip']; ?>
-                </div>
-                <div class="font-weight-bold">
-                  <b>PROFESI : </b> <?= $guru['profesi']; ?>
-                </div>
-                <div class="font-weight-bold">
-                  <b>NOMER TELEPON : </b> <?= $guru['telepon_guru']; ?>
-                </div>
-                <div class="font-weight-bold">
-                  <b>ALAMAT : </b> <?= $guru['alamat_guru']; ?>
+                <dl class="row">
+                  <dt class="col-sm-3">
+                    NIP Guru
+                  </dt>
+                  <dd class="col-sm-9">
+                    : <?= $guru['nip']; ?>
+                  </dd>
+                  <dt class="col-sm-3">
+                    Profesi
+                  </dt>
+                  <dd class="col-sm-9">
+                    : <?= $guru['profesi']; ?>
+                  </dd>
+                  <dt class="col-sm-3">
+                    No Telp
+                  </dt>
+                  <dd class="col-sm-9">
+                    : <?= $guru['telepon_guru']; ?>
+                  </dd>
+                  <dt class="col-sm-3">
+                    Alamat
+                  </dt>
+                  <dd class="col-sm-9">
+                    : <?= $guru['alamat_guru']; ?>
+                  </dd>
+                </dl>
+                <div class="card-footer text-right">
+                  <a href="/guru" class="btn btn-sm btn-primary" type="button">Kembali</a>
                 </div>
               </div>
-            </div>
-            <div class="card-footer text-right">
-              <a href="/guru" class="btn btn-sm btn-primary" type="button">Kembali</a>
             </div>
           </div>
         </div>
