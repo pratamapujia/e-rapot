@@ -15,36 +15,40 @@
               </button>
             </div>
           </div>
+          <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>SUCCESS</strong> <?= session()->getFlashdata('pesan'); ?>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <?php endif; ?>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped" id="save-stage" style="width:100%;">
                 <thead>
                   <tr>
-                    <th class="text-center">#</th>
-                    <th>ID Kelas</th>
+                    <th class="text-center">ID Kelas</th>
                     <th>Tingkat</th>
                     <th>Nama Kelas</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>KLS001</td>
-                    <td>Kelas 1</td>
-                    <td>Kelas 1</td>
-                    <td>
-                      <div class="dropup">
-                        <button class="btn btn-lg" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item has-icon" href="#"><i class="fas fa-edit"></i> Edit</a>
-                          <a class="dropdown-item has-icon" href="#"><i class="fas fa-trash"></i> Hapus</a>
+                  <?php foreach ($kelas as $k) : ?>
+                    <tr>
+                      <td class="text-center"><?= $k['id_kelas']; ?></td>
+                      <td><?= $k['tingkat']; ?></td>
+                      <td><?= $k['nama_kelas']; ?></td>
+                      <td>
+                        <div class="btn-group mb-3 btn-group-sm" role="group">
+                          <!-- <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="#"><i class="fas fa-eye"></i></a> -->
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
                         </div>
-                      </div>
-                    </td>
-                  </tr>
+                      </td>
+                    </tr>
+                  <?php endforeach ?>
                 </tbody>
               </table>
             </div>
@@ -64,9 +68,13 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="" method="POST">
+          <form action="/kelas/save" method="POST">
+            <?= csrf_field(); ?>
             <div class="form-row">
-              <input type="text" class="form-control" hidden="true" name="id_kelas" value="KLS001">
+              <div class="form-group col-md-12">
+                <label>ID Kelas</label>
+                <input type="text" class="form-control" name="id_kelas">
+              </div>
               <div class="form-group col-md-12">
                 <label>Tingkat Kelas</label>
                 <select class="form-control" name="tingkat">
@@ -83,7 +91,7 @@
                 <input type="text" class="form-control" name="nama_kelas">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary m-t-15 waves-effect">Tambah Data</button>
+                <button type="submit" class="btn btn-primary">Tambah Data</button>
               </div>
             </div>
           </form>

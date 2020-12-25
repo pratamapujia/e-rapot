@@ -56,9 +56,9 @@
                       <td><?= $s['telepon_siswa']; ?></td>
                       <td>
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="bottom" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="bottom" title="Edit" href="#"><i class="fas fa-edit"></i></a>
-                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="bottom" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
+                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

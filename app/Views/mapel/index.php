@@ -36,14 +36,10 @@
                     <td>Ilmu Pengetahuan Alam</td>
                     <td>IPA</td>
                     <td>
-                      <div class="dropup">
-                        <button class="btn btn-lg" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-ellipsis-v"></i>
-                        </button>
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item has-icon" href="#"><i class="fas fa-edit"></i> Edit</a>
-                          <a class="dropdown-item has-icon" href="#"><i class="fas fa-trash"></i> Hapus</a>
-                        </div>
+                      <div class="btn-group mb-3 btn-group-sm" role="group">
+                        <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="#"><i class="fas fa-eye"></i></a>
+                        <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
+                        <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
