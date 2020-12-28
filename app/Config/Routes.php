@@ -31,7 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/E-Rapot', 'Home::index');
+$routes->get('/', 'Home::index');
 $routes->get('/guru/create', 'Guru::create');
 $routes->get('/siswa/create', 'Siswa::create');
 $routes->get('/guru/(:segment)', 'Guru::detail/$1');
