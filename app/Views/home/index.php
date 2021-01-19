@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-xl-3 col-lg-6">
         <div class="card card-warning">
-          <div class="card-body card-type-3">
+          <a href="/guru" class="card-body card-type-3">
             <div class="row">
               <div class="col">
                 <h6 class="text-muted mb-0">Jumlah Guru</h6>
@@ -19,12 +19,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="col-xl-3 col-lg-6">
         <div class="card card-info">
-          <div class="card-body card-type-3">
+          <a href="/siswa" class="card-body card-type-3">
             <div class="row">
               <div class="col">
                 <h6 class="text-muted mb-0">Jumlah Siswa</h6>
@@ -36,12 +36,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="col-xl-3 col-lg-6">
         <div class="card card-success">
-          <div class="card-body card-type-3">
+          <a href="/mapel" class="card-body card-type-3">
             <div class="row">
               <div class="col">
                 <h6 class="text-muted mb-0">Jumalah Mapel</h6>
@@ -53,12 +53,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <div class="col-xl-3 col-lg-6">
         <div class="card card-primary">
-          <div class="card-body card-type-3">
+          <a href="/kelas" class="card-body card-type-3">
             <div class="row">
               <div class="col">
                 <h6 class="text-muted mb-0">Jumlah Kelas</h6>
@@ -70,7 +70,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

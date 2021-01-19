@@ -28,33 +28,33 @@
               <table class="table table-striped" id="save-stage" style="width:100%;">
                 <thead>
                   <tr>
-                    <th class="text-center">
+                    <th class="text-left">
                       ID Siswa
                     </th>
-                    <th>Profile</th>
-                    <th>NIS</th>
-                    <th>Nama Siswa</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Agama</th>
-                    <th>Alamat Siswa</th>
-                    <th>Telepon Siswa</th>
-                    <th>Action</th>
+                    <th class="text-left">Profile</th>
+                    <th class="text-left">NIS</th>
+                    <th class="text-left">Nama Siswa</th>
+                    <th class="text-left">Jenis Kelamin</th>
+                    <th class="text-left">Agama</th>
+                    <th class="text-left">Alamat Siswa</th>
+                    <th class="text-left">Telepon Siswa</th>
+                    <th class="text-left">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php foreach ($siswa as $s) : ?>
                     <tr>
-                      <td><?= $s['id_siswa']; ?></td>
+                      <td class="text-left"><?= $s['id_siswa']; ?></td>
                       <td>
                         <img alt="image" src="/img/fsiswa/<?= $s['foto_siswa']; ?>" width="35">
                       </td>
-                      <td><?= $s['nis']; ?></td>
-                      <td><?= $s['nama_siswa']; ?></td>
-                      <td><?= $s['jk_siswa']; ?></td>
-                      <td><?= $s['agama']; ?></td>
-                      <td><?= $s['alamat_siswa']; ?></td>
-                      <td><?= $s['telepon_siswa']; ?></td>
-                      <td>
+                      <td class="text-left"><?= $s['nis']; ?></td>
+                      <td class="text-left"><?= $s['nama_siswa']; ?></td>
+                      <td class="text-left"><?= $s['jk_siswa']; ?></td>
+                      <td class="text-left"><?= $s['agama']; ?></td>
+                      <td class="text-left"><?= $s['alamat_siswa']; ?></td>
+                      <td class="text-left"><?= $s['telepon_siswa']; ?></td>
+                      <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
                           <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
                           <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>

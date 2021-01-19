@@ -20,24 +20,21 @@
               <table class="table table-striped" id="save-stage" style="width:100%;">
                 <thead>
                   <tr>
-                    <th class="text-center">#</th>
-                    <th>ID Mapel</th>
-                    <th>Jenis Mapel</th>
-                    <th>Nama Mapel</th>
-                    <th>Singkatan</th>
-                    <th>Action</th>
+                    <th class="text-left">ID Mapel</th>
+                    <th class="text-left">Jenis Mapel</th>
+                    <th class="text-left">Nama Mapel</th>
+                    <th class="text-left">Singkatan</th>
+                    <th class="text-left">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>MPL00001</td>
-                    <td>Umum</td>
-                    <td>Ilmu Pengetahuan Alam</td>
-                    <td>IPA</td>
-                    <td>
+                    <td class="text-left">MPL00001</td>
+                    <td class="text-left">Umum</td>
+                    <td class="text-left">Ilmu Pengetahuan Alam</td>
+                    <td class="text-left">IPA</td>
+                    <td class="text-left">
                       <div class="btn-group mb-3 btn-group-sm" role="group">
-                        <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="#"><i class="fas fa-eye"></i></a>
                         <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
                         <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
                       </div>

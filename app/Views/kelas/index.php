@@ -28,19 +28,19 @@
               <table class="table table-striped" id="save-stage" style="width:100%;">
                 <thead>
                   <tr>
-                    <th class="text-center">ID Kelas</th>
-                    <th>Tingkat</th>
-                    <th>Nama Kelas</th>
-                    <th>Action</th>
+                    <th class="text-left">ID Kelas</th>
+                    <th class="text-left">Tingkat</th>
+                    <th class="text-left">Nama Kelas</th>
+                    <th class="text-left">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php foreach ($kelas as $k) : ?>
                     <tr>
-                      <td class="text-center"><?= $k['id_kelas']; ?></td>
-                      <td><?= $k['tingkat']; ?></td>
-                      <td><?= $k['nama_kelas']; ?></td>
-                      <td>
+                      <td class="text-left"><?= $k['id_kelas']; ?></td>
+                      <td class="text-left"><?= $k['tingkat']; ?></td>
+                      <td class="text-left"><?= $k['nama_kelas']; ?></td>
+                      <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
                           <!-- <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="#"><i class="fas fa-eye"></i></a> -->
                           <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>

@@ -20,20 +20,17 @@
               <table class="table table-striped" id="save-stage" style="width:100%;">
                 <thead>
                   <tr>
-                    <th class="text-center">#</th>
-                    <th>ID Ekskul</th>
-                    <th>Nama Ekskul</th>
-                    <th>Action</th>
+                    <th class="text-left">ID Ekskul</th>
+                    <th class="text-left">Nama Ekskul</th>
+                    <th class="text-left">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>EKS0001</td>
-                    <td>Pramuka</td>
-                    <td>
+                    <td class="text-left">EKS0001</td>
+                    <td class="text-left">Pramuka</td>
+                    <td class="text-left">
                       <div class="btn-group mb-3 btn-group-sm" role="group">
-                        <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="#"><i class=" fas fa-eye"></i></a>
                         <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
                         <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
                       </div>
