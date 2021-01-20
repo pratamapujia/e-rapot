@@ -15,6 +15,14 @@
               </button>
             </div>
           </div>
+          <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>SUCCESS</strong> <?= session()->getFlashdata('pesan'); ?>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <?php endif; ?>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped" id="save-stage" style="width:100%;">
@@ -26,16 +34,18 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="text-left">EKS0001</td>
-                    <td class="text-left">Pramuka</td>
-                    <td class="text-left">
-                      <div class="btn-group mb-3 btn-group-sm" role="group">
-                        <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
-                        <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
-                      </div>
-                    </td>
-                  </tr>
+                  <?php foreach ($ekskul as $e) : ?>
+                    <tr>
+                      <td class="text-left"><?= $e['id_ekskul']; ?></td>
+                      <td class="text-left"><?= $e['nama_ekskul']; ?></td>
+                      <td class="text-left">
+                        <div class="btn-group mb-3 btn-group-sm" role="group">
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                  <?php endforeach ?>
                 </tbody>
               </table>
             </div>
@@ -55,15 +65,19 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="" method="POST">
+          <form action="/ekskul/save" method="POST">
+            <?= csrf_field(); ?>
             <div class="form-row">
-              <input type="text" class="form-control" hidden="true" name="id_ekskul" value="EKS0001">
+              <div class="form-group col-md-12">
+                <label>ID Ekskul</label>
+                <input type="text" class="form-control" name="id_ekskul">
+              </div>
               <div class="form-group col-md-12">
                 <label>Nama Ekskul</label>
                 <input type="text" class="form-control" name="nama_ekskul">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary m-t-15 waves-effect">Tambah Data</button>
+                <button type="submit" class="btn btn-primary">Tambah Data</button>
               </div>
             </div>
           </form>

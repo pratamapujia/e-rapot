@@ -53,10 +53,10 @@
               <a href="/" class="nav-link"><i class="fas fa-tv"></i> <span>Dashboard</span></a>
             </li>
             <li class="dropdown">
-              <a href="/guru" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> <span>Data Guru</span></a>
+              <a href="/guru" class="nav-link"><i class="fas fa-user-alt"></i> <span>Data Guru</span></a>
             </li>
             <li class="dropdown">
-              <a href="/siswa" class="nav-link"><i class="fas fa-user-alt"></i> <span>Data Siswa</span></a>
+              <a href="/siswa" class="nav-link"><i class="fas fa-user-graduate"></i> <span>Data Siswa</span></a>
             </li>
             <li class="dropdown">
               <a href="/kelas" class="nav-link"><i class="fas fa-building"></i> <span>Data Kelas</span></a>

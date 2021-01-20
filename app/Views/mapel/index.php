@@ -15,6 +15,14 @@
               </button>
             </div>
           </div>
+          <?php if (session()->getFlashdata('pesan')) : ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>SUCCESS</strong> <?= session()->getFlashdata('pesan'); ?>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <?php endif; ?>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped" id="save-stage" style="width:100%;">
@@ -28,18 +36,20 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="text-left">MPL00001</td>
-                    <td class="text-left">Umum</td>
-                    <td class="text-left">Ilmu Pengetahuan Alam</td>
-                    <td class="text-left">IPA</td>
-                    <td class="text-left">
-                      <div class="btn-group mb-3 btn-group-sm" role="group">
-                        <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
-                        <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
-                      </div>
-                    </td>
-                  </tr>
+                  <?php foreach ($mapel as $m) : ?>
+                    <tr>
+                      <td class="text-left"><?= $m['id_mapel']; ?></td>
+                      <td class="text-left"><?= $m['jenis_mapel']; ?></td>
+                      <td class="text-left"><?= $m['nama_mapel']; ?></td>
+                      <td class="text-left"><?= $m['singkatan']; ?></td>
+                      <td class="text-left">
+                        <div class="btn-group mb-3 btn-group-sm" role="group">
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                  <?php endforeach ?>
                 </tbody>
               </table>
             </div>
@@ -59,9 +69,13 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="" method="POST">
+          <form action="/mapel/save" method="POST">
+            <?= csrf_field(); ?>
             <div class="form-row">
-              <input type="text" class="form-control" hidden="true" name="id_mapel" value="MPL0001">
+              <div class="form-group col-md-12">
+                <label>ID Mapel</label>
+                <input type="text" class="form-control" name="id_mapel">
+              </div>
               <div class="form-group col-md-12">
                 <label>Jenis Mata Pelajaran</label>
                 <select class="form-control" name="jenis_mapel">
@@ -78,7 +92,7 @@
                 <input type="text" class="form-control" name="singkatan">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary m-t-15 waves-effect">Tambah Data</button>
+                <button type="submit" class="btn btn-primary">Tambah Data</button>
               </div>
             </div>
           </form>
