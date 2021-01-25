@@ -35,7 +35,7 @@
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Admin</div>
               <div class="dropdown-divider"></div>
-              <a href="auth-login.html" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
+              <a href="#" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
                 Logout
               </a>
             </div>

@@ -20,6 +20,12 @@
                 <div class="author-box-job" style="color: red;"><?= $guru['status']; ?></div><br>
                 <dl class="row">
                   <dt class="col-sm-3">
+                    ID Guru
+                  </dt>
+                  <dd class="col-sm-9">
+                    : <?= $guru['id_guru']; ?>
+                  </dd>
+                  <dt class="col-sm-3">
                     NIP Guru
                   </dt>
                   <dd class="col-sm-9">

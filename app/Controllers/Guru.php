@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use \App\Models\GuruModel;
+use CodeIgniter\Config\Config;
 
 class Guru extends BaseController
 {
@@ -39,7 +40,8 @@ class Guru extends BaseController
   public function create()
   {
     $data = [
-      'title' => 'Form Tambah Data'
+      'title' => 'Form Tambah Data',
+      'validation' => \Config\Services::validation()
     ];
 
     return view('guru/create', $data);
@@ -47,6 +49,48 @@ class Guru extends BaseController
 
   public function save()
   {
+    // Validasi input
+    if (!$this->validate([
+      'id_guru' => [
+        'rules' => 'required|is_unique[guru.id_guru]',
+        'errors' => [
+          'required' => 'ID Guru wajib diisi.',
+          'is_unique' => 'ID Guru tidak boleh sama'
+        ]
+      ],
+      'nip' => [
+        'rules' => 'required|is_unique[guru.nip]|max_length[18]|numeric',
+        'errors' => [
+          'required' => 'NIP Guru wajib diisi',
+          'is_unique' => 'NIP Guru tidak boleh sama',
+          'max_length' => 'NIP Guru tidak boleh lebih dari 18 karakter',
+          'numeric' => 'NIP Guru harus angka'
+        ]
+      ],
+      'nama_guru' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Nama Guru wajib diisi'
+        ]
+      ],
+      'alamat_guru' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Alamat Guru wajib diisi'
+        ]
+      ],
+      'telepon_guru' => [
+        'rules' => 'required|numeric',
+        'errors' => [
+          'required' => 'Telepon Guru wajib diisi.',
+          'numeric' => 'Telepon Guru harus angka'
+        ]
+      ]
+    ])) {
+      $validation = \Config\Services::validation();
+      return redirect()->to('/guru/create')->withInput()->with('validation', $validation);
+    }
+
     $this->guruModel->insert([
       'id_guru' => $this->request->getPost('id_guru'),
       'nip' => $this->request->getPost('nip'),

@@ -16,15 +16,24 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>ID Guru</label>
-                  <input type="text" class="form-control" name="id_guru" autofocus>
+                  <input type="text" class="form-control <?= ($validation->hasError('id_guru')) ? 'is-invalid' : ''; ?>" name="id_guru" value="<?= old('id_guru'); ?>" autofocus>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('id_guru'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>NIP</label>
-                  <input type="text" class="form-control" name="nip">
+                  <input type="text" class="form-control <?= ($validation->hasError('nip')) ? 'is-invalid' : ''; ?>" name="nip" value="<?= old('nip'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('nip'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nama Guru</label>
-                  <input type="text" class="form-control" name="nama_guru">
+                  <input type="text" class="form-control <?= ($validation->hasError('nama_guru')) ? 'is-invalid' : ''; ?>" name="nama_guru" value="<?= old('nama_guru'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('nama_guru'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
@@ -35,7 +44,10 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nomor Telepon</label>
-                  <input type="text" class="form-control" name="telepon_guru">
+                  <input type="text" class="form-control <?= ($validation->hasError('telepon_guru')) ? 'is-invalid' : ''; ?>" name="telepon_guru" value="<?= old('telepon_guru'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('telepon_guru'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Profesi</label>
@@ -53,7 +65,10 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat_guru">
+                  <input type="text" class="form-control <?= ($validation->hasError('alamat_guru')) ? 'is-invalid' : ''; ?>" name="alamat_guru" value="<?= old('alamat_guru'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('alamat_guru'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>file</label>
