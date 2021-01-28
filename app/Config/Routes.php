@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use CodeIgniter\Commands\Utilities\Routes;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -34,7 +36,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/guru/create', 'Guru::create');
 $routes->get('/siswa/create', 'Siswa::create');
-$routes->get('/guru/(:segment)', 'Guru::detail/$1');
+$routes->delete('/guru/(:alphanum)', 'Guru::delete/$1');
+$routes->get('/guru/(:any)', 'Guru::detail/$1');
 $routes->get('/siswa/(:segment)', 'Siswa::detail/$1');
 
 /**

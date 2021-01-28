@@ -106,4 +106,11 @@ class Guru extends BaseController
     session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
     return redirect()->to('/guru');
   }
+
+  public function delete($id_guru)
+  {
+    $this->guruModel->delete($id_guru);
+    session()->setFlashdata('pesan', 'Data berhasil dihapus');
+    return redirect()->to('/guru');
+  }
 }
