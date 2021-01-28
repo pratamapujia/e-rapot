@@ -16,19 +16,31 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>ID Siswa</label>
-                  <input type="text" class="form-control" name="id_siswa">
+                  <input type="text" class="form-control <?= ($validation->hasError('id_siswa')) ? 'is-invalid' : ''; ?>" name="id_siswa" value="<?= old('id_siswa'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('id_siswa'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>NIS</label>
-                  <input type="text" class="form-control" name="nis" maxlength="10" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('nis')) ? 'is-invalid' : ''; ?>" name="nis" value="<?= old('nis'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('nis'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>NISN</label>
-                  <input type="text" class="form-control" name="nisn" maxlength="12" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('nisn')) ? 'is-invalid' : ''; ?>" name="nisn" value="<?= old('nisn'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('nisn'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nama Siswa</label>
-                  <input type="text" class="form-control" name="nama_siswa">
+                  <input type="text" class="form-control <?= ($validation->hasError('nama_siswa')) ? 'is-invalid' : ''; ?>" name="nama_siswa" value="<?= old('nama_siswa'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('nama_siswa'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
@@ -39,11 +51,17 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Tempat Lahir</label>
-                  <input type="text" class="form-control" name="tempat_lahir">
+                  <input type="text" class="form-control <?= ($validation->hasError('tempat_lahir')) ? 'is-invalid' : ''; ?>" name="tempat_lahir" value="<?= old('tempat_lahir'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('tempat_lahir'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Tanggal Lahir</label>
-                  <input type="date" class="form-control" name="tanggal_lahir" required>
+                  <input type="date" class="form-control <?= ($validation->hasError('tanggal_lahir')) ? 'is-invalid' : ''; ?>" name="tanggal_lahir" value="<?= old('tanggal_lahir'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('tanggal_lahir'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Agama</label>
@@ -58,39 +76,60 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Alamat Siswa</label>
-                  <input type="text" class="form-control" name="alamat_siswa" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('alamat_siswa')) ? 'is-invalid' : ''; ?>" name="alamat_siswa" value="<?= old('alamat_siswa'); ?>">
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nomor Telepon Siswa</label>
-                  <input type="text" class="form-control" name="telepon_siswa" maxlength="12">
+                  <input type="text" class="form-control <?= ($validation->hasError('telepon_siswa')) ? 'is-invalid' : ''; ?>" name="telepon_siswa" value="<?= old('telepon_siswa'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('telepon_siswa'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nama Ayah</label>
-                  <input type="text" class="form-control" name="nama_ayah" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('nama_ayah')) ? 'is-invalid' : ''; ?>" name="nama_ayah" value="<?= old('nama_ayah'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('nama_ayah'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Pekerjaan Ayah</label>
-                  <input type="text" class="form-control" name="pekerjaan_ayah" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('pekerjaan_ayah')) ? 'is-invalid' : ''; ?>" name="pekerjaan_ayah" value="<?= old('pekerjaan_ayah'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('pekerjaan_ayah'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nama Ibu</label>
-                  <input type="text" class="form-control" name="nama_ibu" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('nama_ibu')) ? 'is-invalid' : ''; ?>" name="nama_ibu" value="<?= old('nama_ibu'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('nama_ibu'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Pekerjaan Ibu</label>
-                  <input type="text" class="form-control" name="pekerjaan_ibu" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('pekerjaan_ibu')) ? 'is-invalid' : ''; ?>" name="pekerjaan_ibu" value="<?= old('pekerjaan_ibu'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('pekerjaan_ibu'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Alamat Orang Tua</label>
-                  <input type="text" class="form-control" name="alamat_ortu" required>
+                  <input type="text" class="form-control <?= ($validation->hasError('alamat_ortu')) ? 'is-invalid' : ''; ?>" name="alamat_ortu" value="<?= old('alamat_ortu'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('alamat_ortu'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nomor Telepon Orang Tua</label>
-                  <input type="text" class="form-control" name="telepon_ortu" maxlength="12">
+                  <input type="text" class="form-control <?= ($validation->hasError('telepon_guru')) ? 'is-invalid' : ''; ?>" name="telepon_ortu" value="<?= old('telepon_ortu'); ?>">
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('telepon_guru'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Masukkan Foto Siswa</label>
-                  <input type="text" class="form-control" name="foto_siswa" required>
+                  <input type="text" class="form-control" name="foto_siswa">
                 </div>
               </div>
             </div>
