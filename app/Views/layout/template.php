@@ -100,6 +100,25 @@
   <script src="/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="/js/custom.js"></script>
+
+  <!-- preview img -->
+  <script>
+    function previewImg() {
+      const fotoGuru = document.querySelector('#foto_guru');
+      const fotoLabel = document.querySelector('.custom-file-label');
+      const imgPreview = document.querySelector('.img-preview');
+
+      fotoLabel.textContent = fotoGuru.files[0].name;
+
+      const fileGuru = new FileReader();
+      fileGuru.readAsDataURL(fotoGuru.files[0]);
+
+      fileGuru.onload = function(e) {
+        imgPreview.src = e.target.result;
+      }
+    }
+  </script>
+
 </body>
 
 </html>

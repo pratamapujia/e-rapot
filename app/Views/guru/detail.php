@@ -32,6 +32,12 @@
                     : <?= $guru['nip']; ?>
                   </dd>
                   <dt class="col-sm-3">
+                    Kelamin
+                  </dt>
+                  <dd class="col-sm-9">
+                    : <?= $guru['jk_guru']; ?>
+                  </dd>
+                  <dt class="col-sm-3">
                     Profesi
                   </dt>
                   <dd class="col-sm-9">

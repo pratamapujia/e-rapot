@@ -33,7 +33,7 @@
                   <a href="" data-toggle="dropdown" class="btn"><i class="fas fa-ellipsis-v"></i></a>
                   <div class="dropdown-menu">
                     <a href="/guru/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-eye"></i>Detail</a>
-                    <a href="#" class="dropdown-item has-icon"><i class="fas fa-edit"></i>Edit</a>
+                    <a href="/guru/edit/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-edit"></i>Edit</a>
                     <form action="/guru/<?= $g['id_guru']; ?>" method="POST">
                       <?= csrf_field(); ?>
                       <input type="hidden" name="_method" value="DELETE">
@@ -55,7 +55,7 @@
                   <div class="text font-weight-bold"><?= $g['telepon_guru']; ?></div>
                 </div>
                 <div class="author-box-job">
-                  <i class="fas fa-map-marker-alt"><?= $g['alamat_guru']; ?></i>
+                  <i class="fas fa-map-marker-alt"> <?= $g['alamat_guru']; ?></i>
                 </div>
               </div>
             </div>
