@@ -57,8 +57,12 @@
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
                           <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
-                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/siswa/edit/<?= $s['id_siswa']; ?>"><i class="fas fa-edit"></i></a>
+                          <form action="/siswa/<?= $s['id_siswa']; ?>" method="POST">
+                            <?= csrf_field(); ?>
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" data-toggle="tooltip" data-placement="left" title="Hapus" class="btn btn-icon btn-danger" onclick="return confirm('apakah anda yakin mau menghapus data ini !!!')"><i class="fas fa-trash"></i></button>
+                          </form>
                         </div>
                       </td>
                     </tr>

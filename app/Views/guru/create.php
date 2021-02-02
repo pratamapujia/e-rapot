@@ -71,7 +71,7 @@
                   </div>
                 </div>
                 <div class="form-group col-md-6">
-                  <label>File</label>
+                  <label>Foto Guru</label>
                   <div class="row">
                     <div class="form-group col-md-4">
                       <img src="../img/fguru/none.png" class="img-thumbnail img-preview">

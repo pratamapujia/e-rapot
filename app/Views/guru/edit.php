@@ -79,7 +79,7 @@
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_guru')) ? 'is-invalid' : ''; ?>" name="foto_guru" id="foto_guru" onchange="previewImg()">
+                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_guru')) ? 'is-invalid' : ''; ?>" name="foto_guru" id="foto_guru" onchange="previewImgGuru()">
                         <label class="custom-file-label" for="foto_guru"><?= $guru['foto_guru']; ?></label>
                         <div class="invalid-feedback" style="padding-top: 5px;">
                           <?= $validation->getError('foto_guru'); ?>

@@ -194,9 +194,8 @@ class Guru extends BaseController
         ]
       ],
       'foto_guru' => [
-        'rules' => 'uploaded[foto_guru]|max_size[foto_guru,2048]|is_image[foto_guru]|mime_in[foto_guru,image/jpg,image/jpeg,image/png]',
+        'rules' => 'max_size[foto_guru,2048]|is_image[foto_guru]|mime_in[foto_guru,image/jpg,image/jpeg,image/png]',
         'errors' => [
-          'uploaded' => 'Foto guru wajib diisi',
           'max_size' => 'Ukuran gambar terlalu besar (max 2mb)',
           'is_image' => 'File yang anda pilih bukan gambar',
           'mime_in' => 'File yang anda pilih bukan gambar'
@@ -213,7 +212,6 @@ class Guru extends BaseController
     if ($fileGuru->getError() == 4) {
       $namaFoto = $this->request->getVar('fotoLama');
     } else {
-
       //pindahkan Gambar
       $fileGuru->move('img/fguru');
       //ambil nama file foto guru

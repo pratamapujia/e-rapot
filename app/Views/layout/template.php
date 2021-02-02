@@ -103,7 +103,7 @@
 
   <!-- preview img -->
   <script>
-    function previewImg() {
+    function previewImgGuru() {
       const fotoGuru = document.querySelector('#foto_guru');
       const fotoLabel = document.querySelector('.custom-file-label');
       const imgPreview = document.querySelector('.img-preview');
@@ -114,6 +114,22 @@
       fileGuru.readAsDataURL(fotoGuru.files[0]);
 
       fileGuru.onload = function(e) {
+        imgPreview.src = e.target.result;
+      }
+    }
+  </script>
+  <script>
+    function previewImgSiswa() {
+      const fotoSiswa = document.querySelector('#foto_siswa');
+      const fotoLabel = document.querySelector('.custom-file-label');
+      const imgPreview = document.querySelector('.img-preview');
+
+      fotoLabel.textContent = fotoSiswa.files[0].name;
+
+      const fileSiswa = new FileReader();
+      fileSiswa.readAsDataURL(fotoSiswa.files[0]);
+
+      fileSiswa.onload = function(e) {
         imgPreview.src = e.target.result;
       }
     }
