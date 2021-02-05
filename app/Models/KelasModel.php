@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use CodeIgniter\Database\SQLite3\Table;
 use CodeIgniter\Model;
 
 class KelasModel extends model

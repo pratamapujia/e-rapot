@@ -55,14 +55,14 @@ class Guru extends BaseController
         'rules' => 'required|is_unique[guru.id_guru]',
         'errors' => [
           'required' => 'ID Guru wajib diisi.',
-          'is_unique' => 'ID Guru tidak boleh sama'
+          'is_unique' => 'ID Guru sudah ada'
         ]
       ],
       'nip' => [
         'rules' => 'required|is_unique[guru.nip]|max_length[18]|numeric',
         'errors' => [
           'required' => 'NIP Guru wajib diisi',
-          'is_unique' => 'NIP Guru tidak boleh sama',
+          'is_unique' => 'NIP Guru sudah ada',
           'max_length' => 'NIP Guru tidak boleh lebih dari 18 karakter',
           'numeric' => 'NIP Guru harus angka'
         ]

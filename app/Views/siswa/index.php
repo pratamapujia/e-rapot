@@ -56,8 +56,8 @@
                       <td class="text-left"><?= $s['telepon_siswa']; ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/siswa/edit/<?= $s['id_siswa']; ?>"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>" style="padding-top: 6px;"><i class="fas fa-eye"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/siswa/edit/<?= $s['id_siswa']; ?>" style="padding-top: 5.5px; padding-left: 10px;"><i class="fas fa-edit"></i></a>
                           <form action="/siswa/<?= $s['id_siswa']; ?>" method="POST">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">

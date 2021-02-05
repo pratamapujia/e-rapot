@@ -36,6 +36,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/guru/create', 'Guru::create');
 $routes->get('/siswa/create', 'Siswa::create');
+$routes->get('/kelas/create', 'Kelas::create');
 $routes->get('/guru/edit/(:segment)', 'Guru::edit/$1');
 $routes->get('/siswa/edit/(:segment)', 'Siswa::edit/$1');
 $routes->delete('/guru/(:alphanum)', 'Guru::delete/$1');

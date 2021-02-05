@@ -5,16 +5,17 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title><?= $title; ?></title>
-  <link rel="stylesheet" href="/css/app.min.css">
-  <link rel="stylesheet" href="/bundles/datatables/datatables.min.css">
-  <link rel="stylesheet" href="/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="/bundles/select2/dist/css/select2.min.css">
-  <link rel="stylesheet" href="/bundles/jquery-selectric/selectric.css">
+  <link rel="stylesheet" href="../css/app.min.css">
+  <link rel="stylesheet" href="../bundles/datatables/datatables.min.css">
+  <link rel="stylesheet" href="../bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../bundles/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../bundles/jquery-selectric/selectric.css">
+  <link rel="stylesheet" href="../bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
   <!-- Custom style CSS -->
-  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="../css/custom.css">
   <link rel='shortcut icon' type='image/x-icon' href='/logo.ico' />
 </head>
 
@@ -80,26 +81,29 @@
       E-RAPOT | Dibuat oleh <a target="_blank" href="https://github.com/pratamapujia">Pratama Puji A</a> Join on <a href="https://github.com/pratamapujia/e-rapot" target="_blank">Github</a>
     </div>
     <div class="footer-right">
-      Waktu proses {elapsed_time} detik. &copy; 2020
+      &copy; 2021
     </div>
   </footer>
   <!-- General JS Scripts -->
-  <script src="/js/app.min.js"></script>
+  <script src="../js/app.min.js"></script>
   <!-- JS Libraies -->
-  <script src="/bundles/apexcharts/apexcharts.min.js"></script>
-  <script src="/bundles/datatables/datatables.min.js"></script>
-  <script src="/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-  <script src="/bundles/jquery-ui/jquery-ui.min.js"></script>
-  <script src="/bundles/select2/dist/js/select2.full.min.js"></script>
-  <script src="/bundles/jquery-selectric/jquery.selectric.min.js"></script>
+  <script src="../bundles/apexcharts/apexcharts.min.js"></script>
+  <script src="../bundles/datatables/datatables.min.js"></script>
+  <script src="../bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../bundles/jquery-ui/jquery-ui.min.js"></script>
+  <script src="../bundles/select2/dist/js/select2.full.min.js"></script>
+  <script src="../bundles/jquery-selectric/jquery.selectric.min.js"></script>
+  <script src="../bundles/cleave-js/dist/cleave.min.js"></script>
+  <script src="../bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
   <!-- Page Specific JS File -->
-  <script src="/bundles/sweetalert/sweetalert.min.js"></script>
-  <script src="/js/page/index.js"></script>
-  <script src="/js/page/datatables.js"></script>
+  <script src="../bundles/sweetalert/sweetalert.min.js"></script>
+  <script src="../js/page/index.js"></script>
+  <script src="../js/page/datatables.js"></script>
+  <script src="../js/page/forms-advanced-forms.js"></script>
   <!-- Template JS File -->
-  <script src="/js/scripts.js"></script>
+  <script src="../js/scripts.js"></script>
   <!-- Custom JS File -->
-  <script src="/js/custom.js"></script>
+  <script src="../js/custom.js"></script>
 
   <!-- preview img -->
   <script>
