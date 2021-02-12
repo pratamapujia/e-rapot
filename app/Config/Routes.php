@@ -39,8 +39,10 @@ $routes->get('/siswa/create', 'Siswa::create');
 $routes->get('/kelas/create', 'Kelas::create');
 $routes->get('/guru/edit/(:segment)', 'Guru::edit/$1');
 $routes->get('/siswa/edit/(:segment)', 'Siswa::edit/$1');
+$routes->get('/kelas/edit/(:segment)', 'Kelas::edit/$1');
 $routes->delete('/guru/(:alphanum)', 'Guru::delete/$1');
 $routes->delete('/siswa/(:alphanum)', 'Siswa::delete/$1');
+$routes->delete('/kelas/(:alphanum)', 'Kelas::delete/$1');
 $routes->get('/guru/(:any)', 'Guru::detail/$1');
 $routes->get('/siswa/(:any)', 'Siswa::detail/$1');
 

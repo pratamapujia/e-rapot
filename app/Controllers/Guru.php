@@ -156,7 +156,7 @@ class Guru extends BaseController
     } else {
       $ruleid = 'required|is_unique[guru.id_guru]';
     }
-
+    // dd($ruleid);
     // Validasi input
     if (!$this->validate([
       'id_guru' => [
