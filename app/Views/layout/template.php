@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
   <!-- Template CSS -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/bundles/sweetalert/sweetalert2.min.css">
   <link rel="stylesheet" href="/css/components.css">
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="/css/custom.css">
@@ -77,11 +78,8 @@
     </div>
   </div>
   <footer class="main-footer">
-    <div class="footer-left">
-      E-RAPOT | Dibuat oleh <a target="_blank" href="https://github.com/pratamapujia">Pratama Puji A</a> Join on <a href="https://github.com/pratamapujia/e-rapot" target="_blank">Github</a>
-    </div>
-    <div class="footer-right">
-      &copy; 2021
+    <div class="footer-left" style="text-transform: none; font-size:10pt">
+      &copy; Copyright 2021 | Develop By <a target="_blank" href="https://github.com/pratamapujia">PPA</a>
     </div>
   </footer>
   <!-- General JS Scripts -->
@@ -95,49 +93,19 @@
   <script src="/bundles/jquery-selectric/jquery.selectric.min.js"></script>
   <script src="/bundles/cleave-js/dist/cleave.min.js"></script>
   <script src="/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <!-- <script src="/bundles/sweetalert/sweetalert.min.js"></script> -->
   <!-- Page Specific JS File -->
-  <script src="../bundles/sweetalert/sweetalert.min.js"></script>
+  <script src="/bundles/sweetalert/sweetalert2.all.js"></script>
+  <script src="/bundles/sweetalert/sweetalert2.min.js"></script>
   <script src="/js/page/index.js"></script>
   <script src="/js/page/datatables.js"></script>
   <script src="/js/page/forms-advanced-forms.js"></script>
+  <script src="assets/js/page/sweetalert.js"></script>
   <!-- Template JS File -->
   <script src="/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="/js/custom.js"></script>
-
-  <!-- preview img -->
-  <script>
-    function previewImgGuru() {
-      const fotoGuru = document.querySelector('#foto_guru');
-      const fotoLabel = document.querySelector('.custom-file-label');
-      const imgPreview = document.querySelector('.img-preview');
-
-      fotoLabel.textContent = fotoGuru.files[0].name;
-
-      const fileGuru = new FileReader();
-      fileGuru.readAsDataURL(fotoGuru.files[0]);
-
-      fileGuru.onload = function(e) {
-        imgPreview.src = e.target.result;
-      }
-    }
-  </script>
-  <script>
-    function previewImgSiswa() {
-      const fotoSiswa = document.querySelector('#foto_siswa');
-      const fotoLabel = document.querySelector('.custom-file-label');
-      const imgPreview = document.querySelector('.img-preview');
-
-      fotoLabel.textContent = fotoSiswa.files[0].name;
-
-      const fileSiswa = new FileReader();
-      fileSiswa.readAsDataURL(fotoSiswa.files[0]);
-
-      fileSiswa.onload = function(e) {
-        imgPreview.src = e.target.result;
-      }
-    }
-  </script>
+  <script src="/js/jsku.js"></script>
 
 </body>
 

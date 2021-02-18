@@ -14,14 +14,15 @@
         </div>
       </div>
     </div>
-    <?php if (session()->getFlashdata('pesan')) : ?>
+    <!-- <?php if (session()->getFlashdata('pesan')) : ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>SUCCESS</strong> <?= session()->getFlashdata('pesan'); ?>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-    <?php endif; ?>
+    <?php endif; ?> -->
+    <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
     <div class="row">
       <?php foreach ($guru as $g) : ?>
         <div class="col-xl-3 col-lg-6">
@@ -45,7 +46,7 @@
             </div>
             <div class="card-body">
               <div class="author-box-center">
-                <img src="/img/fguru/<?= $g['foto_guru']; ?>" alt="image" class="rounded-circle author-box-picture" style="width: 100px; height: 100px;">
+                <img src="/img/fguru/<?= $g['foto_guru']; ?>" alt="image" class=" author-box-picture" style="width: 100px; height: 100px;">
                 <div class="clearfix"></div>
                 <div class="author-box-name">
                   <a><?= $g['nama_guru']; ?></a>

@@ -135,7 +135,7 @@
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_siswa')) ? 'is-invalid' : ''; ?>" name="foto_siswa" id="foto_siswa" onchange="previewImg()">
+                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_siswa')) ? 'is-invalid' : ''; ?>" name="foto_siswa" id="foto_siswa" onchange="previewImgSiswa()">
                         <label class="custom-file-label" for="foto_siswa">Pilih Gambar..</label>
                         <div class="invalid-feedback" style="padding-top: 5px;">
                           <?= $validation->getError('foto_siswa'); ?>

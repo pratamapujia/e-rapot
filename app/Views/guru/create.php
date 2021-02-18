@@ -78,7 +78,7 @@
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_guru')) ? 'is-invalid' : ''; ?>" name="foto_guru" id="foto_guru" onchange="previewImg()">
+                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_guru')) ? 'is-invalid' : ''; ?>" name="foto_guru" id="foto_guru" onchange="previewImgGuru()">
                         <label class="custom-file-label" for="foto_guru">Pilih Gambar..</label>
                         <div class="invalid-feedback" style="padding-top: 5px;">
                           <?= $validation->getError('foto_guru'); ?>
@@ -90,7 +90,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary" id="swal-2">Tambah Data</button>
+              <button type="submit" class="btn btn-primary">Tambah Data</button>
             </div>
           </form>
         </div>
