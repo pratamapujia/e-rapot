@@ -8,10 +8,10 @@
       <div class="col-12">
         <div class="card card-danger">
           <div class="card-header">
-            <h4>Data Siswa</h4>
+            <h4>Data Wali Kelas</h4>
             <div class="card-header-action">
               <a href="/siswa/create" class="btn btn-primary btn-icon icon-left">
-                <i class="fas fa-plus"></i> Tambah Data Siswa
+                <i class="fas fa-plus"></i> Tambah Data Wali Kelas
               </a>
             </div>
           </div>
@@ -23,43 +23,39 @@
               </button>
             </div>
           <?php endif; ?> -->
-          <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
+          <!-- <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div> -->
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped" id="save-stage" style="width:100%;">
                 <thead>
                   <tr>
                     <th class="text-left">
-                      ID Siswa
+                      ID Walas
                     </th>
                     <th class="text-left">Profile</th>
-                    <th class="text-left">NIS</th>
-                    <th class="text-left">Nama Siswa</th>
-                    <th class="text-left">Jenis Kelamin</th>
-                    <th class="text-left">Agama</th>
-                    <th class="text-left">Alamat Siswa</th>
-                    <th class="text-left">Telepon Siswa</th>
+                    <th class="text-left">NIP</th>
+                    <th class="text-left">Nama Guru</th>
+                    <th class="text-left">Mengampu Mapel</th>
+                    <th class="text-left">Wali Kelas</th>
                     <th class="text-left">Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($siswa as $s) : ?>
+                  <?php foreach ($walas as $w) : ?>
                     <tr>
-                      <td class="text-left"><?= $s['id_siswa']; ?></td>
+                      <td class="text-left"><?= $w['id_walas']; ?></td>
                       <td>
-                        <img alt="image" src="/img/fsiswa/<?= $s['foto_siswa']; ?>" width="35">
+                        <img alt="image" src="/img/fguru/<?= $w['foto_guru']; ?>" width="35">
                       </td>
-                      <td class="text-left"><?= $s['nis']; ?></td>
-                      <td class="text-left"><?= $s['nama_siswa']; ?></td>
-                      <td class="text-left"><?= $s['jk_siswa']; ?></td>
-                      <td class="text-left"><?= $s['agama']; ?></td>
-                      <td class="text-left"><?= $s['alamat_siswa']; ?></td>
-                      <td class="text-left"><?= $s['telepon_siswa']; ?></td>
+                      <td class="text-left"><?= $w['nip']; ?></td>
+                      <td class="text-left"><?= $w['nama_guru']; ?></td>
+                      <td class="text-left"><?= $w['nama_mapel']; ?></td>
+                      <td class="text-left"><?= $w['nama_kelas']; ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/siswa/<?= $s['id_siswa']; ?>" style="padding-top: 6px;"><i class="fas fa-eye"></i></a>
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/siswa/edit/<?= $s['id_siswa']; ?>" style="padding-top: 5.5px; padding-left: 10px;"><i class="fas fa-edit"></i></a>
-                          <form action="/siswa/<?= $s['id_siswa']; ?>" method="POST">
+                          <!-- <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/walas/<?= $w['id_walas']; ?>" style="padding-top: 6px;"><i class="fas fa-eye"></i></a> -->
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/walas/edit/<?= $w['id_walas']; ?>" style="padding-top: 5.5px; padding-left: 10px;"><i class="fas fa-edit"></i></a>
+                          <form action="/walas/<?= $w['id_walas']; ?>" method="POST">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" data-toggle="tooltip" data-placement="left" title="Hapus" class="btn btn-icon btn-danger" onclick="return confirm('apakah anda yakin mau menghapus data ini !!!')"><i class="fas fa-trash"></i></button>

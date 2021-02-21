@@ -46,7 +46,7 @@
             </div>
             <div class="card-body">
               <div class="author-box-center">
-                <img src="/img/fguru/<?= $g['foto_guru']; ?>" alt="image" class=" author-box-picture" style="width: 100px; height: 100px;">
+                <img src="/img/fguru/<?= $g['foto_guru']; ?>" alt="image" class="rounded author-box-picture" style="width: 100px; height: 130px;">
                 <div class="clearfix"></div>
                 <div class="author-box-name">
                   <a><?= $g['nama_guru']; ?></a>

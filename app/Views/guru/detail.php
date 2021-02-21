@@ -10,7 +10,7 @@
           <div class="card author-box card-primary">
             <div class="card-body">
               <div class="author-box-left"><br>
-                <img alt="image" src="/img/fguru/<?= $guru['foto_guru']; ?>" class="rounded-circle author-box-picture" style="width: 110px; height: 110px;">
+                <img alt="image" src="/img/fguru/<?= $guru['foto_guru']; ?>" class="rounded author-box-picture" style="width: 110px; height: 140px;">
                 <div class="clearfix"></div>
               </div>
               <div class="author-box-details">

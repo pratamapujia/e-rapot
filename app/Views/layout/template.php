@@ -58,6 +58,9 @@
               <a href="/guru" class="nav-link"><i class="fas fa-user-alt"></i> <span>Data Guru</span></a>
             </li>
             <li class="dropdown">
+              <a href="/walas" class="nav-link"><i class="fas fa-server"></i> <span>Data Wali Kelas</span></a>
+            </li>
+            <li class="dropdown">
               <a href="/siswa" class="nav-link"><i class="fas fa-user-graduate"></i> <span>Data Siswa</span></a>
             </li>
             <li class="dropdown">
