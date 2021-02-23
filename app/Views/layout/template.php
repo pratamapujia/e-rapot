@@ -94,7 +94,7 @@
   <script src="/bundles/jquery-ui/jquery-ui.min.js"></script>
   <script src="/bundles/select2/dist/js/select2.full.min.js"></script>
   <script src="/bundles/jquery-selectric/jquery.selectric.min.js"></script>
-  <script src="/bundles/cleave-js/dist/cleave.min.js"></script>
+  <!-- <script src="/bundles/cleave-js/dist/cleave.min.js"></script> -->
   <script src="/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
   <!-- <script src="/bundles/sweetalert/sweetalert.min.js"></script> -->
   <!-- Page Specific JS File -->
@@ -102,13 +102,14 @@
   <script src="/bundles/sweetalert/sweetalert2.min.js"></script>
   <script src="/js/page/index.js"></script>
   <script src="/js/page/datatables.js"></script>
-  <script src="/js/page/forms-advanced-forms.js"></script>
-  <script src="assets/js/page/sweetalert.js"></script>
+  <!-- <script src="/js/page/forms-advanced-forms.js"></script> -->
+  <script src="/js/page/sweetalert.js"></script>
   <!-- Template JS File -->
   <script src="/js/scripts.js"></script>
   <!-- Custom JS File -->
   <script src="/js/custom.js"></script>
   <script src="/js/jsku.js"></script>
+
 
 </body>
 

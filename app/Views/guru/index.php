@@ -33,13 +33,14 @@
                 <div class="dropdown">
                   <a href="" data-toggle="dropdown" class="btn"><i class="fas fa-ellipsis-v"></i></a>
                   <div class="dropdown-menu">
-                    <a href="/guru/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-eye"></i>Detail</a>
+                    <a href="/guru/detail/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-eye"></i>Detail</a>
                     <a href="/guru/edit/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-edit"></i>Edit</a>
-                    <form action="/guru/<?= $g['id_guru']; ?>" method="POST">
+                    <!-- <form action="/guru/<?= $g['id_guru']; ?>" method="POST">
                       <?= csrf_field(); ?>
                       <input type="hidden" name="_method" value="DELETE">
-                      <button type="submit" class="dropdown-item has-icon text-danger" onclick="return confirm('apakah anda yakin mau menghapus data ini !!!')" style="font-size: 13px;"><i class="fas fa-trash" style="padding-top: 9px;"></i>Hapus</button>
-                    </form>
+                      <button type="submit" class="dropdown-item has-icon text-danger btn-hapus" style="font-size: 13px;"><i class="fas fa-trash" style="padding-top: 9px;"></i>Hapus</button>
+                    </form> -->
+                    <a href="/guru/delete/<?= $g['id_guru']; ?>" class="dropdown-item has-icon text-danger hapus"><i class="fas fa-trash"></i>Hapus</a>
                   </div>
                 </div>
               </div>

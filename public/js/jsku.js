@@ -37,6 +37,27 @@ if (swal) {
     title: swal,
     showConfirmButton: false,
     icon: 'success',
-    timer: 1500 
+    timer: 1500,
+    timerProgressBar: true
   })
 }
+$(document).on('click','.hapus', function(e){
+  //menghentikan aksi default
+  e.preventDefault();
+  const href = $(this).attr('href');
+
+  Swal.fire({
+    title: 'Apa anda yakin ?',
+    text: "Data ini akan dihapus permanen!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#16c79a',
+    cancelButtonColor: '#ff5e78',
+    confirmButtonText: 'Ya, saya yakin!',
+    cancelButtonText: 'Batal'
+  }).then((result) => {
+    if (result.value) {
+      window.location.href = href;
+    }
+  })
+})

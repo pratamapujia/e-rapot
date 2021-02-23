@@ -45,9 +45,11 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control select2" name="jk_siswa" required>
-                    <option value="L">Laki-Laki</option>
-                    <option value="P">Perempuan</option>
+                  <select class="form-control selectric" name="jk_siswa" required>
+                    <?php foreach ($siswa as $s) : ?>
+                      <option value="L">Laki-Laki</option>
+                    <?php endforeach; ?>
+                    <!-- <option value="P">Perempuan</option> -->
                   </select>
                 </div>
                 <div class="form-group col-md-6">
@@ -66,7 +68,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Agama</label>
-                  <select class="form-control select2" name="agama" required>
+                  <select class="form-control selectric" name="agama" required>
                     <option value="Islam">Islam</option>
                     <option value="Kristen">Kristen</option>
                     <option value="Katholik">Katholik</option>

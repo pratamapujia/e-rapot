@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Data Wali Kelas</h4>
             <div class="card-header-action">
-              <a href="/siswa/create" class="btn btn-primary btn-icon icon-left">
+              <a href="/walas/create" class="btn btn-primary btn-icon icon-left">
                 <i class="fas fa-plus"></i> Tambah Data Wali Kelas
               </a>
             </div>
@@ -23,7 +23,7 @@
               </button>
             </div>
           <?php endif; ?> -->
-          <!-- <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div> -->
+          <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped" id="save-stage" style="width:100%;">
@@ -54,12 +54,13 @@
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
                           <!-- <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/walas/<?= $w['id_walas']; ?>" style="padding-top: 6px;"><i class="fas fa-eye"></i></a> -->
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/walas/edit/<?= $w['id_walas']; ?>" style="padding-top: 5.5px; padding-left: 10px;"><i class="fas fa-edit"></i></a>
-                          <form action="/walas/<?= $w['id_walas']; ?>" method="POST">
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/walas/edit/<?= $w['id_walas']; ?>"><i class="fas fa-edit"></i></a>
+                          <!-- <form action="/walas/<?= $w['id_walas']; ?>" method="POST">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" data-toggle="tooltip" data-placement="left" title="Hapus" class="btn btn-icon btn-danger" onclick="return confirm('apakah anda yakin mau menghapus data ini !!!')"><i class="fas fa-trash"></i></button>
-                          </form>
+                          </form> -->
+                          <a href="/walas/delete/<?= $w['id_walas']; ?>" class="btn btn-icon btn-danger" id="btn-hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

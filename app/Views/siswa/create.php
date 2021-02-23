@@ -44,9 +44,9 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control select2" name="jk_siswa" required>
-                    <option value="L">Laki-Laki</option>
-                    <option value="P">Perempuan</option>
+                  <select class="form-control selectric" name="jk_siswa" required>
+                    <option value="Laki-Laki">Laki-Laki</option>
+                    <option value="Perempuan">Perempuan</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Agama</label>
-                  <select class="form-control select2" name="agama" required>
+                  <select class="form-control selectric" name="agama" required>
                     <option value="Islam">Islam</option>
                     <option value="Kristen">Kristen</option>
                     <option value="Katholik">Katholik</option>
@@ -135,7 +135,7 @@
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_siswa')) ? 'is-invalid' : ''; ?>" name="foto_siswa" id="foto_siswa" onchange="previewImgSiswa()">
+                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_siswa')) ? 'is-invalid' : ''; ?>" name="foto_siswa" id="foto_siswa" value="<?= old('foto_siswa'); ?>" onchange="previewImgSiswa()">
                         <label class="custom-file-label" for="foto_siswa">Pilih Gambar..</label>
                         <div class="invalid-feedback" style="padding-top: 5px;">
                           <?= $validation->getError('foto_siswa'); ?>
