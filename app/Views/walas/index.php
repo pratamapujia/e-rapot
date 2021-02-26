@@ -43,7 +43,7 @@
                 <tbody>
                   <?php foreach ($walas as $w) : ?>
                     <tr>
-                      <td class="text-left"><?= $w['id_walas']; ?></td>
+                      <td class="text-left"><a href="/guru/detail/<?= $w['id_guru']; ?>"><?= $w['id_walas']; ?></a></td>
                       <td>
                         <img alt="image" src="/img/fguru/<?= $w['foto_guru']; ?>" width="35">
                       </td>

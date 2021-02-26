@@ -13,7 +13,7 @@ class SiswaModel extends model
   public function getSiswa($id_siswa = false)
   {
     if ($id_siswa == false) {
-      return $this->findAll();
+      return $this->db->table('siswa')->join('agama', 'agama.agama=siswa.agama')->get()->getResultArray();
     }
 
     return $this->where(['id_siswa' => $id_siswa])->first();

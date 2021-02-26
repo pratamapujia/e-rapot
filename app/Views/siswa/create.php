@@ -45,6 +45,7 @@
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
                   <select class="form-control selectric" name="jk_siswa" required>
+                    <option value="">- Pilih -</option>
                     <option value="Laki-Laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
                   </select>
@@ -66,12 +67,15 @@
                 <div class="form-group col-md-6">
                   <label>Agama</label>
                   <select class="form-control selectric" name="agama" required>
-                    <option value="Islam">Islam</option>
-                    <option value="Kristen">Kristen</option>
+                    <option value="">- Pilih -</option>
+                    <?php foreach ($agama as $a) : ?>
+                      <option value="<?= $a['agama']; ?>"><?= $a['agama']; ?></option>
+                    <?php endforeach ?>
+                    <!-- <option value="Kristen">Kristen</option>
                     <option value="Katholik">Katholik</option>
                     <option value="Buddha">Buddha</option>
                     <option value="Hindu">Hindu</option>
-                    <option value="Konghucu">Khonghucu</option>
+                    <option value="Konghucu">Khonghucu</option> -->
                   </select>
                 </div>
                 <div class="form-group col-md-6">

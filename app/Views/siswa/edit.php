@@ -46,10 +46,9 @@
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
                   <select class="form-control selectric" name="jk_siswa" required>
-                    <?php foreach ($siswa as $s) : ?>
-                      <option value="L">Laki-Laki</option>
-                    <?php endforeach; ?>
-                    <!-- <option value="P">Perempuan</option> -->
+                    <option value="">- Pilih -</option>
+                    <option value="Laki-Laki" <?= $siswa['jk_siswa'] == "Laki-Laki" ? "selected" : null; ?>>Laki-Laki</option>
+                    <option value="Perempuan" <?= $siswa['jk_siswa'] == "Perempuan" ? "selected" : null; ?>>Perempuan</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
@@ -69,12 +68,10 @@
                 <div class="form-group col-md-6">
                   <label>Agama</label>
                   <select class="form-control selectric" name="agama" required>
-                    <option value="Islam">Islam</option>
-                    <option value="Kristen">Kristen</option>
-                    <option value="Katholik">Katholik</option>
-                    <option value="Buddha">Buddha</option>
-                    <option value="Hindu">Hindu</option>
-                    <option value="Konghucu">Khonghucu</option>
+                    <option value="">- Pilih -</option>
+                    <?php foreach ($agama as $a) : ?>
+                      <option value="<?= $a['agama'] ?>" <?= $a['agama'] == $siswa['agama'] ? "selected" : null; ?>><?= $a['agama']; ?></option>
+                    <?php endforeach ?>
                   </select>
                 </div>
                 <div class="form-group col-md-6">

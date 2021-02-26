@@ -41,6 +41,7 @@ $routes->get('/kelas/create', 'Kelas::create');
 $routes->get('/guru/edit/(:segment)', 'Guru::edit/$1');
 $routes->get('/siswa/edit/(:segment)', 'Siswa::edit/$1');
 $routes->get('/kelas/edit/(:segment)', 'Kelas::edit/$1');
+$routes->get('/walas/edit/(:segment)', 'Walas::edit/$1');
 $routes->delete('/guru/(:alphanum)', 'Guru::delete/$1');
 $routes->delete('/siswa/(:alphanum)', 'Siswa::delete/$1');
 $routes->delete('/walas/(:alphanum)', 'Walas::delete/$1');

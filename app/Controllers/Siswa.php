@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\AgamaModel;
 use App\Models\SiswaModel;
 
 class Siswa extends BaseController
@@ -10,6 +11,7 @@ class Siswa extends BaseController
   public function __construct()
   {
     $this->siswaModel = new SiswaModel();
+    $this->agamaModel = new AgamaModel();
   }
 
   public function index()
@@ -39,6 +41,7 @@ class Siswa extends BaseController
   {
     $data = [
       'title' => 'Form Tambah Data',
+      'agama' => $this->agamaModel->getAgama(),
       'validation' => \Config\Services::validation()
     ];
 
@@ -193,7 +196,8 @@ class Siswa extends BaseController
     $data = [
       'title' => 'Form Ubah Data siswa',
       'validation' => \Config\Services::validation(),
-      'siswa' => $this->siswaModel->getSiswa($id_siswa)
+      'siswa' => $this->siswaModel->getSiswa($id_siswa),
+      'agama' => $this->agamaModel->getAgama()
     ];
 
     return view('siswa/edit', $data);
