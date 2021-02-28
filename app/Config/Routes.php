@@ -38,6 +38,7 @@ $routes->get('/guru/create', 'Guru::create');
 $routes->get('/walas/create', 'Walas::create');
 $routes->get('/siswa/create', 'Siswa::create');
 $routes->get('/kelas/create', 'Kelas::create');
+$routes->get('/mapel/create', 'Mapel::create');
 $routes->get('/guru/edit/(:segment)', 'Guru::edit/$1');
 $routes->get('/siswa/edit/(:segment)', 'Siswa::edit/$1');
 $routes->get('/kelas/edit/(:segment)', 'Kelas::edit/$1');
