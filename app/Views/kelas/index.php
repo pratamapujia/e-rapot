@@ -15,14 +15,15 @@
               </a>
             </div>
           </div>
-          <?php if (session()->getFlashdata('pesan')) : ?>
+          <!-- <?php if (session()->getFlashdata('pesan')) : ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
               <strong>SUCCESS</strong> <?= session()->getFlashdata('pesan'); ?>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-          <?php endif; ?>
+          <?php endif; ?> -->
+          <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped" id="save-stage" style="width:100%;">
@@ -42,12 +43,13 @@
                       <td class="text-left"><?= $k['nama_kelas']; ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/kelas/edit/<?= $k['id_kelas']; ?>"><i class="fas fa-edit" style="padding-top: 5.5px; padding-left: 5px;"></i></a>
-                          <form action="/kelas/<?= $k['id_kelas']; ?>" method="POST">
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/kelas/edit/<?= $k['id_kelas']; ?>"><i class="fas fa-edit"></i></a>
+                          <!-- <form action="/kelas/<?= $k['id_kelas']; ?>" method="POST">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" data-toggle="tooltip" data-placement="left" title="Hapus" class="btn btn-icon btn-danger" onclick="return confirm('apakah anda yakin mau menghapus data ini !!!')"><i class="fas fa-trash"></i></button>
-                          </form>
+                          </form> -->
+                          <a class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus" href="/kelas/delete/<?= $k['id_kelas']; ?>"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

@@ -60,7 +60,7 @@
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" data-toggle="tooltip" data-placement="left" title="Hapus" class="btn btn-icon btn-danger" onclick="return confirm('apakah anda yakin mau menghapus data ini !!!')"><i class="fas fa-trash"></i></button>
                           </form> -->
-                          <a href="/walas/delete/<?= $w['id_walas']; ?>" class="btn btn-icon btn-danger" id="btn-hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
+                          <a href="/walas/delete/<?= $w['id_walas']; ?>" class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

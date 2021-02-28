@@ -58,48 +58,6 @@
       </div>
     </div>
   </section>
-  <!-- modal form tambah Mapel -->
-  <div class="modal fade" id="tambahmapel" tabindex="-1" role="dialog" aria-labelledby="formModal" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="formModal">Tambah Data Kelas</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form action="/mapel/save" method="POST">
-            <?= csrf_field(); ?>
-            <div class="form-row">
-              <div class="form-group col-md-12">
-                <label>ID Mapel</label>
-                <input type="text" class="form-control" name="id_mapel">
-              </div>
-              <div class="form-group col-md-12">
-                <label>Jenis Mata Pelajaran</label>
-                <select class="form-control" name="jenis_mapel">
-                  <option value="Umum">Umum</option>
-                  <option value="Mulok">Mulok</option>
-                </select>
-              </div>
-              <div class="form-group col-md-12">
-                <label>Nama Mapel</label>
-                <input type="text" class="form-control" name="nama_mapel">
-              </div>
-              <div class="form-group col-md-12">
-                <label>Singkatan</label>
-                <input type="text" class="form-control" name="singkatan">
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Tambah Data</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <?= $this->endSection(); ?>

@@ -39,7 +39,6 @@
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
                   <select class="form-control selectric" selected="<?= $guru['jk_guru']; ?>" name="jk_guru">
-                    <option value="">- Pilih -</option>
                     <option value="Laki-Laki" <?= $guru['jk_guru'] == "Laki-Laki" ? "selected" : null; ?>>Laki-Laki</option>
                     <option value="Perempuan" <?= $guru['jk_guru'] == "Perempuan" ? "selected" : null; ?>>Perempuan</option>
                   </select>
@@ -54,7 +53,6 @@
                 <div class="form-group col-md-6">
                   <label>Profesi</label>
                   <select class="form-control selectric" selected="<?= $guru['profesi']; ?>" name="profesi">
-                    <option value="">- Pilih -</option>
                     <option value="Guru Biasa" <?= $guru['profesi'] == "Guru Biasa" ? "selected" : null; ?>>Guru Biasa</option>
                     <option value="Guru BK" <?= $guru['profesi'] == "Guru BK" ? "selected" : null; ?>>Guru BK</option>
                   </select>

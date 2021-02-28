@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\MapelModel;
+use CodeIgniter\Config\Config;
 
 class Mapel extends BaseController
 {
@@ -20,6 +21,14 @@ class Mapel extends BaseController
     ];
     return view('mapel/index', $data);
   }
+
+  public function create()
+  {
+    $data = [
+      'title' => 'Form Tambah Mapel',
+      'validation' => \Config\Services::validation()
+    ];
+  } // dorong mari
 
   public function save()
   {
