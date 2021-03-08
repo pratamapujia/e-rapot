@@ -10,13 +10,13 @@
           <div class="card-header">
             <h4>Form Tambah Data Kelas</h4>
           </div>
-          <form action="/kelas/save" method="POST">
+          <form action="/mapel/save" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label>ID Mapel</label>
-                  <input type="text" class="form-control" name="id_mapel">
+                  <input type="text" class="form-control" readonly name="id_mapel" value="<?= $kode; ?>">
                 </div>
                 <div class="form-group col-md-12">
                   <label>Jenis Mata Pelajaran</label>

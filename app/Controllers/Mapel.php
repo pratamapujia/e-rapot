@@ -24,11 +24,20 @@ class Mapel extends BaseController
 
   public function create()
   {
+    //Generate auto number
+    $kode = $this->mapelModel->autonumber();
+    $no = substr($kode, 3, 4) + 1;
+    $autonumber = "MPL" . sprintf("%04s", $no);
+
+
     $data = [
       'title' => 'Form Tambah Mapel',
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'kode' => $autonumber
     ];
-  } // dorong mari
+
+    return view('mapel/create', $data);
+  }
 
   public function save()
   {

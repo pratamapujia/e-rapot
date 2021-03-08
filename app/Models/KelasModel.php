@@ -18,4 +18,11 @@ class KelasModel extends model
 
     return $this->where(['id_kelas' => $id_kelas])->first();
   }
+
+  public function autonumber()
+  {
+    $cd = $this->db->query("SELECT MAX(id_kelas) AS kode FROM kelas");
+    $kd = $cd->getRow();
+    return $kd->kode;
+  }
 }

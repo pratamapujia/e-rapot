@@ -23,9 +23,15 @@ class Kelas extends BaseController
 
   public function create()
   {
+    //Generate Auto Number
+    $kode = $this->kelasModel->autonumber();
+    $no = substr($kode, 3, 4) + 1;
+    $autonumber = "KLS" . sprintf("%03s", $no);
+
     $data = [
       'title' => 'Form Tambah Data Kelas',
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'kode' => $autonumber
     ];
     return view('kelas/create', $data);
   }
@@ -34,13 +40,13 @@ class Kelas extends BaseController
   {
     // Validasi input
     if (!$this->validate([
-      'id_kelas' => [
-        'rules' => 'required|is_unique[kelas.id_kelas]',
-        'errors' => [
-          'required' => 'ID Kelas wajib diisi',
-          'is_unique' => 'ID Kelas sudah ada'
-        ]
-      ],
+      // 'id_kelas' => [
+      //   'rules' => 'required|is_unique[kelas.id_kelas]',
+      //   'errors' => [
+      //     'required' => 'ID Kelas wajib diisi',
+      //     'is_unique' => 'ID Kelas sudah ada'
+      //   ]
+      // ],
       'nama_kelas' => [
         'rules' => 'required',
         'errors' => [

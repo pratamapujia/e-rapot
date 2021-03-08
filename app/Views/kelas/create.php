@@ -16,7 +16,7 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label>ID Kelas</label>
-                  <input type="text" class="form-control <?= ($validation->hasError('id_kelas')) ? 'is-invalid' : ''; ?>" name="id_kelas" value="<?= old('id_kelas'); ?>" autofocus>
+                  <input type="text" class="form-control" readonly name="id_kelas" value="<?= $kode ?>">
                   <div class="invalid-feedback">
                     <?= $validation->getError('id_kelas'); ?>
                   </div>

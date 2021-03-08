@@ -61,3 +61,10 @@ $(document).on('click','.hapus', function(e){
     }
   })
 })
+
+var cleaveI = new Cleave('.mapel-input', {
+  prefix: 'MPL',
+  delimiter: '-',
+  blocks: [10],
+  uppercase: true
+});

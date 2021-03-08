@@ -94,7 +94,8 @@
   <script src="/bundles/jquery-ui/jquery-ui.min.js"></script>
   <script src="/bundles/select2/dist/js/select2.full.min.js"></script>
   <script src="/bundles/jquery-selectric/jquery.selectric.min.js"></script>
-  <!-- <script src="/bundles/cleave-js/dist/cleave.min.js"></script> -->
+  <script src="/bundles/cleave-js/dist/cleave.min.js"></script>
+  <!-- <script src="/bundles/cleave-js/dist/addons/cleave-phone.us.js"></script> -->
   <script src="/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
   <!-- <script src="/bundles/sweetalert/sweetalert.min.js"></script> -->
   <!-- Page Specific JS File -->
