@@ -16,7 +16,7 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>ID Walas</label>
-                  <input type="text" class="form-control <?= ($validation->hasError('id_walas')) ? 'is-invalid' : ''; ?>" name="id_walas" value="<?= (old('id_walas')) ? old('id_walas') : $walas['id_walas'] ?>">
+                  <input type="text" class="form-control" name="id_walas" value="<?= $walas['id_walas']; ?>" readonly>
                   <div class="invalid-feedback">
                     <?= $validation->getError('id_walas'); ?>
                   </div>

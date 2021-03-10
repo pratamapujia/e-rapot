@@ -39,10 +39,16 @@ class Siswa extends BaseController
 
   public function create()
   {
+    //Generate auto number
+    $kode = $this->siswaModel->autonumber();
+    $no = substr($kode, 3, 4) + 1;
+    $autonumber = "SWA" . sprintf("%04s", $no);
+
     $data = [
       'title' => 'Form Tambah Data',
       'agama' => $this->agamaModel->getAgama(),
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'kode' => $autonumber
     ];
 
     return view('siswa/create', $data);
@@ -52,13 +58,13 @@ class Siswa extends BaseController
   {
     //validasi input
     if (!$this->validate([
-      'id_siswa' => [
-        'rules' => 'required|is_unique[siswa.id_siswa]',
-        'errors' => [
-          'required' => 'ID Siswa wajib diisi.',
-          'is_unique' => 'ID Siswa tidak boleh sama'
-        ]
-      ],
+      // 'id_siswa' => [
+      //   'rules' => 'required|is_unique[siswa.id_siswa]',
+      //   'errors' => [
+      //     'required' => 'ID Siswa wajib diisi.',
+      //     'is_unique' => 'ID Siswa tidak boleh sama'
+      //   ]
+      // ],
       'nis' => [
         'rules' => 'required|max_length[18]|numeric',
         'errors' => [
@@ -205,22 +211,22 @@ class Siswa extends BaseController
 
   public function update($id_siswa)
   {
-    $idlama = $this->siswaModel->getSiswa($this->request->getVar('id_siswa'));
-    if ($idlama['id_siswa'] == $this->request->getVar('id_siswa')) {
-      $ruleid = 'required';
-    } else {
-      $ruleid = 'required|is_unique[siswa.id_siswa]';
-    }
+    // $idlama = $this->siswaModel->getSiswa($this->request->getVar('id_siswa'));
+    // if ($idlama['id_siswa'] == $this->request->getVar('id_siswa')) {
+    //   $ruleid = 'required';
+    // } else {
+    //   $ruleid = 'required|is_unique[siswa.id_siswa]';
+    // }
 
     // Validasi input
     if (!$this->validate([
-      'id_siswa' => [
-        'rules' => $ruleid,
-        'errors' => [
-          'required' => 'ID Siswa wajib diisi.',
-          'is_unique' => 'ID Siswa tidak boleh sama'
-        ]
-      ],
+      // 'id_siswa' => [
+      //   'rules' => $ruleid,
+      //   'errors' => [
+      //     'required' => 'ID Siswa wajib diisi.',
+      //     'is_unique' => 'ID Siswa tidak boleh sama'
+      //   ]
+      // ],
       'nis' => [
         'rules' => 'required|max_length[18]|numeric',
         'errors' => [

@@ -28,12 +28,18 @@ class Walas extends BaseController
 
   public function create()
   {
+    //Generate auto number
+    $kode = $this->walasModel->autonumber();
+    $no = substr($kode, 3, 4) + 1;
+    $autonumber = "WLS" . sprintf("%04s", $no);
+
     $data = [
       'title' => 'Form Tambah Data',
       'guru' => $this->guruModel->getGuru(),
       'kelas' => $this->kelasModel->getKelas(),
       'mapel' => $this->mapelModel->getMapel(),
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'kode' => $autonumber
     ];
 
     return view('walas/create', $data);
@@ -41,18 +47,18 @@ class Walas extends BaseController
 
   public function save()
   {
-    //validasi input
-    if (!$this->validate([
-      'id_walas' => [
-        'rules' => 'required|is_unique[walas.id_walas]',
-        'errors' => [
-          'required' => 'ID Walas wajib diisi',
-          'is_unique' => 'ID Walas sudah ada'
-        ]
-      ]
-    ])) {
-      return redirect()->to('/walas/create')->withInput();
-    }
+    // //validasi input
+    // if (!$this->validate([
+    //   'id_walas' => [
+    //     'rules' => 'required|is_unique[walas.id_walas]',
+    //     'errors' => [
+    //       'required' => 'ID Walas wajib diisi',
+    //       'is_unique' => 'ID Walas sudah ada'
+    //     ]
+    //   ]
+    // ])) {
+    //   return redirect()->to('/walas/create')->withInput();
+    // }
 
     $this->walasModel->insert([
       'id_walas' => $this->request->getPost('id_walas'),
@@ -88,26 +94,26 @@ class Walas extends BaseController
 
   public function update($id_walas)
   {
-    //Set validasi
-    $idlama = $this->walasModel->getWalas($this->request->getVar('id_walas'));
-    if ($idlama['id_walas'] == $this->request->getVar('id_walas')) {
-      $ruleid = 'required';
-    } else {
-      $ruleid = 'required|is_unique[walas.id_walas]';
-    }
+    // //Set validasi
+    // $idlama = $this->walasModel->getWalas($this->request->getVar('id_walas'));
+    // if ($idlama['id_walas'] == $this->request->getVar('id_walas')) {
+    //   $ruleid = 'required';
+    // } else {
+    //   $ruleid = 'required|is_unique[walas.id_walas]';
+    // }
 
-    //Validasi Input
-    if (!$this->validate([
-      'id_walas' => [
-        'rules' => $ruleid,
-        'errors' => [
-          'required' => 'ID Siswa wajin diisi',
-          'is_unique' => 'ID Siswa tidak boleh sama'
-        ]
-      ]
-    ])) {
-      return redirect()->to('/walas/edit/' . $this->request->getVar('id_walas'))->withInput();
-    }
+    // //Validasi Input
+    // if (!$this->validate([
+    //   'id_walas' => [
+    //     'rules' => $ruleid,
+    //     'errors' => [
+    //       'required' => 'ID Siswa wajin diisi',
+    //       'is_unique' => 'ID Siswa tidak boleh sama'
+    //     ]
+    //   ]
+    // ])) {
+    //   return redirect()->to('/walas/edit/' . $this->request->getVar('id_walas'))->withInput();
+    // }
 
     $this->walasModel->save([
       'id_walas' => $id_walas,

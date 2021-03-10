@@ -17,10 +17,10 @@
                 <input type="hidden" name="fotoLama" value="<?= $siswa['foto_siswa']; ?>">
                 <div class="form-group col-md-6">
                   <label>ID Siswa</label>
-                  <input type="text" class="form-control <?= ($validation->hasError('id_siswa')) ? 'is-invalid' : ''; ?>" name="id_siswa" value="<?= (old('id_siswa')) ? old('id_siswa') : $siswa['id_siswa'] ?>">
-                  <div class="invalid-feedback">
-                    <?= $validation->getError('id_siswa'); ?>
-                  </div>
+                  <input type="text" class="form-control" name="id_siswa" value="<?= $siswa['id_siswa']; ?>" readonly>
+                  <!-- <div class="invalid-feedback">
+                    </?= $validation->getError('id_siswa'); ?>
+                  </div> -->
                 </div>
                 <div class="form-group col-md-6">
                   <label>NIS</label>

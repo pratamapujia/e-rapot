@@ -18,4 +18,11 @@ class GuruModel extends Model
 
     return $this->where(['id_guru' => $id_guru])->first();
   }
+
+  public function autonumber()
+  {
+    $cd = $this->db->query("SELECT MAX(id_guru) AS kode FROM guru");
+    $kd = $cd->getRow();
+    return $kd->kode;
+  }
 }

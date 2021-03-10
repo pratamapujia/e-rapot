@@ -18,4 +18,11 @@ class SiswaModel extends model
 
     return $this->where(['id_siswa' => $id_siswa])->first();
   }
+
+  public function autonumber()
+  {
+    $cd = $this->db->query("SELECT MAX(id_siswa) as kode FROM siswa");
+    $kd = $cd->getRow();
+    return $kd->kode;
+  }
 }

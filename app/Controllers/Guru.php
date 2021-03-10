@@ -39,9 +39,15 @@ class Guru extends BaseController
 
   public function create()
   {
+    //Generate auto number
+    $kode = $this->guruModel->autonumber();
+    $no = substr($kode, 3, 4) + 1;
+    $autonumber = "GRU" . sprintf("%04s", $no);
+
     $data = [
       'title' => 'Form Tambah Data Guru',
-      'validation' => \Config\Services::validation()
+      'validation' => \Config\Services::validation(),
+      'kode' => $autonumber
     ];
 
     return view('guru/create', $data);
@@ -51,13 +57,13 @@ class Guru extends BaseController
   {
     // Validasi input
     if (!$this->validate([
-      'id_guru' => [
-        'rules' => 'required|is_unique[guru.id_guru]',
-        'errors' => [
-          'required' => 'ID Guru wajib diisi.',
-          'is_unique' => 'ID Guru sudah ada'
-        ]
-      ],
+      // 'id_guru' => [
+      //   'rules' => 'required|is_unique[guru.id_guru]',
+      //   'errors' => [
+      //     'required' => 'ID Guru wajib diisi.',
+      //     'is_unique' => 'ID Guru sudah ada'
+      //   ]
+      // ],
       'nip' => [
         'rules' => 'required|is_unique[guru.nip]|max_length[18]|numeric',
         'errors' => [
@@ -150,22 +156,22 @@ class Guru extends BaseController
 
   public function update($id_guru)
   {
-    $idlama = $this->guruModel->getGuru($this->request->getVar('id_guru'));
-    if ($idlama['id_guru'] == $this->request->getVar('id_guru')) {
-      $ruleid = 'required';
-    } else {
-      $ruleid = 'required|is_unique[guru.id_guru]';
-    }
+    // $idlama = $this->guruModel->getGuru($this->request->getVar('id_guru'));
+    // if ($idlama['id_guru'] == $this->request->getVar('id_guru')) {
+    //   $ruleid = 'required';
+    // } else {
+    //   $ruleid = 'required|is_unique[guru.id_guru]';
+    // }
     // dd($ruleid);
     // Validasi input
     if (!$this->validate([
-      'id_guru' => [
-        'rules' => $ruleid,
-        'errors' => [
-          'required' => 'ID Guru wajib diisi.',
-          'is_unique' => 'ID Guru tidak boleh sama'
-        ]
-      ],
+      // 'id_guru' => [
+      //   'rules' => $ruleid,
+      //   'errors' => [
+      //     'required' => 'ID Guru wajib diisi.',
+      //     'is_unique' => 'ID Guru tidak boleh sama'
+      //   ]
+      // ],
       'nip' => [
         'rules' => 'required|max_length[18]|numeric',
         'errors' => [

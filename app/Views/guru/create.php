@@ -16,10 +16,10 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label>ID Guru</label>
-                  <input type="text" class="form-control <?= ($validation->hasError('id_guru')) ? 'is-invalid' : ''; ?>" name="id_guru" value="<?= old('id_guru'); ?>" autofocus>
-                  <div class="invalid-feedback">
-                    <?= $validation->getError('id_guru'); ?>
-                  </div>
+                  <input type="text" class="form-control" name="id_guru" value="<?= $kode; ?>" readonly>
+                  <!-- <div class="invalid-feedback">
+                    </?= $validation->getError('id_guru'); ?>
+                  </div> -->
                 </div>
                 <div class="form-group col-md-6">
                   <label>NIP</label>

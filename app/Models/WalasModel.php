@@ -17,4 +17,11 @@ class WalasModel extends model
     }
     return $this->where(['id_walas' => $id_walas])->first();
   }
+
+  public function autonumber()
+  {
+    $cd = $this->db->query("SELECT MAX(id_walas) as kode FROM walas");
+    $kd = $cd->getRow();
+    return $kd->kode;
+  }
 }

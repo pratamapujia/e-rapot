@@ -89,22 +89,22 @@ class Kelas extends BaseController
 
   public function update($id_kelas)
   {
-    $idlama = $this->kelasModel->getKelas($this->request->getVar('id_kelas'));
-    if ($idlama['id_kelas'] == $this->request->getVar('id_kelas')) {
-      $ruleid = 'required';
-    } else {
-      $ruleid = 'required|is_unique[kelas.id_kelas]';
-    }
+    // $idlama = $this->kelasModel->getKelas($this->request->getVar('id_kelas'));
+    // if ($idlama['id_kelas'] == $this->request->getVar('id_kelas')) {
+    //   $ruleid = 'required';
+    // } else {
+    //   $ruleid = 'required|is_unique[kelas.id_kelas]';
+    // }
     // dd($ruleid);
     // Validasi input
     if (!$this->validate([
-      'id_kelas' => [
-        'rules' => $ruleid,
-        'errors' => [
-          'required' => 'ID Kelas wajib diisi',
-          'is_unique' => 'ID Kelas sudah ada'
-        ]
-      ],
+      // 'id_kelas' => [
+      //   'rules' => $ruleid,
+      //   'errors' => [
+      //     'required' => 'ID Kelas wajib diisi',
+      //     'is_unique' => 'ID Kelas sudah ada'
+      //   ]
+      // ],
       'nama_kelas' => [
         'rules' => 'required',
         'errors' => [
