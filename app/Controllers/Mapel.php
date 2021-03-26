@@ -41,6 +41,24 @@ class Mapel extends BaseController
 
   public function save()
   {
+    // validasi input
+    if (!$this->validate([
+      'nama_mapel' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Nama Mapel wajib diisi'
+        ]
+      ],
+      'singkatan' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Singkatan wajib diisi'
+        ]
+      ]
+    ])) {
+      return redirect()->to('/mapel/create')->withInput();
+    }
+
     $this->mapelModel->insert([
       'id_mapel' => $this->request->getPost('id_mapel'),
       'jenis_mapel' => $this->request->getPost('jenis_mapel'),
@@ -49,6 +67,56 @@ class Mapel extends BaseController
     ]);
 
     session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
+    return redirect()->to('/mapel');
+  }
+
+  public function delete($id_mapel)
+  {
+    $this->mapelModel->delete($id_mapel);
+    session()->setFlashdata('pesan', 'Data berhasil dihapus');
+    return redirect()->to('/mapel');
+  }
+
+  public function edit($id_mapel)
+  {
+    $data = [
+      'title' => 'Form Ubah Data Kelas',
+      'validation' => \Config\Services::validation(),
+      'mapel' => $this->mapelModel->getmapel($id_mapel)
+    ];
+
+    return view('mapel/edit', $data);
+  }
+
+  public function update($id_mapel)
+  {
+    // validasi input
+    if (!$this->validate([
+      'nama_mapel' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Nama Mapel wajib diisi'
+        ]
+      ],
+      'singkatan' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Singkatan wajib diisi'
+        ]
+      ]
+    ])) {
+      return redirect()->to('/mapel/edit/' . $this->request->getVar('id_mapel'))->withInput();
+    }
+
+    $this->mapelModel->save([
+      'id_mapel' => $id_mapel,
+      'jenis_mapel' => $this->request->getVar('jenis_mapel'),
+      'nama_mapel' => $this->request->getVar('nama_mapel'),
+      'singkatan' => $this->request->getVar('singkatan')
+    ]);
+
+    session()->setFlashdata('pesan', 'Data berhasil diubah');
+
     return redirect()->to('/mapel');
   }
 }

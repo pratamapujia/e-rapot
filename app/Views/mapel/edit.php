@@ -8,33 +8,33 @@
       <div class="col-6">
         <div class="card card-info">
           <div class="card-header">
-            <h4>Form Tambah Data Mapel</h4>
+            <h4>Form Ubah Data Mapel</h4>
           </div>
-          <form action="/mapel/save" method="POST">
+          <form action="/mapel/update/<?= $mapel['id_mapel']; ?>" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label>ID Mapel</label>
-                  <input type="text" class="form-control" readonly name="id_mapel" value="<?= $kode; ?>">
+                  <input type="text" class="form-control" name="id_mapel" value="<?= $mapel['id_mapel']; ?>" readonly>
                 </div>
                 <div class="form-group col-md-12">
                   <label>Jenis Mata Pelajaran</label>
                   <select class="form-control selectric" name="jenis_mapel">
-                    <option value="Umum">Umum</option>
-                    <option value="Mulok">Mulok</option>
+                    <option value="Umum" <?= $mapel['jenis_mapel'] == "Umum" ? "selected" : null; ?>>Umum</option>
+                    <option value="Mulok" <?= $mapel['jenis_mapel'] == "Mulok" ? "selected" : null; ?>>Mulok</option>
                   </select>
                 </div>
                 <div class="form-group col-md-12">
                   <label>Nama Mapel</label>
-                  <input type="text" class="form-control <?= ($validation->hasError('nama_mapel')) ? 'is-invalid' : ''; ?>" name="nama_mapel">
-                  <div class="infalid-feedback">
+                  <input type="text" class="form-control <?= ($validation->hasError('nama_mapel')) ? 'is-invalid' : ''; ?>" name="nama_mapel" value="<?= (old('nama_mapel')) ? old('nama_mapel') : $mapel['nama_mapel']; ?>">
+                  <div class="invalid-feedback">
                     <?= $validation->getError('nama_mapel'); ?>
                   </div>
                 </div>
                 <div class="form-group col-md-12">
                   <label>Singkatan</label>
-                  <input type="text" class="form-control <?= ($validation->hasError('singkatan')) ? 'is-invalid' : ''; ?>" name="singkatan">
+                  <input type="text" class="form-control <?= ($validation->hasError('singkatan')) ? 'is-invalid' : ''; ?>" name="singkatan" value="<?= (old('singkatan')) ? old('singkatan') : $mapel['singkatan']; ?>">
                   <div class="infalid-feedback">
                     <?= $validation->getError('singkatan'); ?>
                   </div>
@@ -42,7 +42,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Tambah Data</button>
+              <button type="submit" class="btn btn-primary">Ubah Data</button>
             </div>
           </form>
         </div>

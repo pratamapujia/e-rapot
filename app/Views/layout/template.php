@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="/css/components.css">
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='/logo.ico' />
+  <link rel='shortcut icon' href='/img/def.ico' />
 </head>
 
 <body>
@@ -33,7 +33,7 @@
           </ul>
         </div>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <span style="color: slategrey;"> Hello Admin</span> <img alt="image" src="/img/user.png" class="rounded-circle"></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <span style="color: slategrey;"> Hello Admin | </span> <img alt="image" src="/img/profile.png" class="rounded-circle"></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Admin</div>
               <div class="dropdown-divider"></div>
@@ -47,7 +47,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.php"> <img alt="image" src="/img/logo.png" class="header-logo" /> <span class="logo-name">E-Raport</span>
+            <a href="index.php"> <img alt="image" src="/img/icon.png" class="header-logo" /> <span class="logo-name">E-Raport</span>
             </a>
           </div>
           <ul class="sidebar-menu">

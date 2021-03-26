@@ -45,8 +45,8 @@
                       <td class="text-left"><?= $m['singkatan']; ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="#"><i class="fas fa-edit"></i></a>
-                          <a class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="left" title="Hapus" href="#"><i class="fas fa-trash"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/mapel/edit/<?= $m['id_mapel']; ?>"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus" href="/mapel/delete/<?= $m['id_mapel']; ?>"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

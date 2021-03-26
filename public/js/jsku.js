@@ -28,8 +28,27 @@ function previewImgSiswa() {
     imgPreview.src = e.target.result;
   }
 }
+// Toast Sweet ALert
+// const swal = $('.swal').data('swal');
+// if (swal) {
+//   const Toast = Swal.mixin({
+//     toast: true,
+//     position: 'top',
+//     showConfirmButton: false,
+//     timer: 2000,
+//     timerProgressBar: true,
+//     didOpen: (toast) => {
+//     toast.addEventListener('mouseenter',Swal.stopTimer)
+//     toast.addEventListener('mouseleave', Swal.resumeTimer)  
+//     }
+//   })
+//   Toast.fire({
+//     icon: 'success',
+//     title: swal
+//   })
+// }
 
-// Swal Sweet Alert
+//Swal Sweet Alert
 const swal = $('.swal').data('swal');
 if (swal) {
   Swal.fire({
@@ -37,10 +56,11 @@ if (swal) {
     title: swal,
     showConfirmButton: false,
     icon: 'success',
-    timer: 1500,
+    timer: 2000,
     timerProgressBar: true
   })
 }
+
 $(document).on('click','.hapus', function(e){
   //menghentikan aksi default
   e.preventDefault();
@@ -58,6 +78,15 @@ $(document).on('click','.hapus', function(e){
   }).then((result) => {
     if (result.value) {
       window.location.href = href;
+    } else{
+      Swal.fire({
+        title: 'Dibatalkan',
+        text: 'Data anda masih aman',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true
+      })
     }
   })
 })

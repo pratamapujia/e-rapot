@@ -43,10 +43,12 @@ $routes->get('/guru/edit/(:segment)', 'Guru::edit/$1');
 $routes->get('/siswa/edit/(:segment)', 'Siswa::edit/$1');
 $routes->get('/kelas/edit/(:segment)', 'Kelas::edit/$1');
 $routes->get('/walas/edit/(:segment)', 'Walas::edit/$1');
+$routes->get('/mapel/edit/(:segment)', 'Mapel::edit/$1');
 $routes->delete('/guru/(:alphanum)', 'Guru::delete/$1');
 $routes->delete('/siswa/(:alphanum)', 'Siswa::delete/$1');
 $routes->delete('/walas/(:alphanum)', 'Walas::delete/$1');
 $routes->delete('/kelas/(:alphanum)', 'Kelas::delete/$1');
+$routes->delete('/mapel/(:alphanum)', 'Mapel::delete/$1');
 $routes->get('/guru/(:segment)', 'Guru::detail/$1');
 $routes->get('/siswa/(:segment)', 'Siswa::detail/$1');
 
