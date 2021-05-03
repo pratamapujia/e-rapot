@@ -94,27 +94,6 @@ class Walas extends BaseController
 
   public function update($id_walas)
   {
-    // //Set validasi
-    // $idlama = $this->walasModel->getWalas($this->request->getVar('id_walas'));
-    // if ($idlama['id_walas'] == $this->request->getVar('id_walas')) {
-    //   $ruleid = 'required';
-    // } else {
-    //   $ruleid = 'required|is_unique[walas.id_walas]';
-    // }
-
-    // //Validasi Input
-    // if (!$this->validate([
-    //   'id_walas' => [
-    //     'rules' => $ruleid,
-    //     'errors' => [
-    //       'required' => 'ID Siswa wajin diisi',
-    //       'is_unique' => 'ID Siswa tidak boleh sama'
-    //     ]
-    //   ]
-    // ])) {
-    //   return redirect()->to('/walas/edit/' . $this->request->getVar('id_walas'))->withInput();
-    // }
-
     $this->walasModel->save([
       'id_walas' => $id_walas,
       'id_guru' => $this->request->getVar('id_guru'),

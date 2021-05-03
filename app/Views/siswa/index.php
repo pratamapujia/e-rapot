@@ -15,18 +15,18 @@
               </a>
             </div>
           </div>
-          <!-- <?php if (session()->getFlashdata('pesan')) : ?>
+          <!-- </?php if (session()->getFlashdata('pesan')) : ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>SUCCESS</strong> <?= session()->getFlashdata('pesan'); ?>
+              <strong>SUCCESS</strong> </?= session()->getFlashdata('pesan'); ?>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-          <?php endif; ?> -->
+          </?php endif; ?> -->
           <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-striped" id="save-stage" style="width:100%;">
+              <table class="table table-striped" id="mytable" style="width:100%;">
                 <thead>
                   <tr>
                     <th class="text-left">

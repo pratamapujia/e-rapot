@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nama Guru</label>
-                  <select class="form-control selectric" name="id_guru" required>
+                  <select class="form-control selectric" name="id_guru">
                     <option value="">Pilih Guru</option>
                     <?php foreach ($guru as $g) : ?>
                       <option value="<?= $g['id_guru']; ?>"><?= $g['nama_guru']; ?></option>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Mengampu Mapel</label>
-                  <select class="form-control selectric" name="id_mapel" required>
+                  <select class="form-control selectric" name="id_mapel">
                     <option value="">Pilih Mapel</option>
                     <?php foreach ($mapel as $m) : ?>
                       <option value="<?= $m['id_mapel']; ?>"><?= $m['nama_mapel']; ?></option>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Wali Kelas</label>
-                  <select class="form-control selectric" name="id_kelas" required>
+                  <select class="form-control selectric" name="id_kelas">
                     <option value="">Pilih Kelas</option>
                     <?php foreach ($kelas as $k) : ?>
                       <option value="<?= $k['id_kelas']; ?>"><?= $k['nama_kelas']; ?></option>

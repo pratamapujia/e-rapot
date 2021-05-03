@@ -1,3 +1,5 @@
+<?php $request = \Config\Services::request() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
   <link rel="stylesheet" href="/css/components.css">
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="/css/custom.css">
-  <link rel='shortcut icon' href='/img/def.ico' />
+  <link rel='shortcut icon' href='/img/default.ico' />
 </head>
 
 <body>
@@ -28,8 +30,8 @@
       <nav class="navbar navbar-expand-lg main-navbar sticky">
         <div class="form-inline mr-auto">
           <ul class="navbar-nav mr-3">
-            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
-									collapse-btn"> <i data-feather="align-justify"></i></a></li>
+            <li><a href="" data-toggle="sidebar" class="nav-link nav-link-lg
+									collapse-btn"> <i data-feather="menu"></i></a></li>
           </ul>
         </div>
         <ul class="navbar-nav navbar-right">
@@ -47,30 +49,30 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.php"> <img alt="image" src="/img/icon.png" class="header-logo" /> <span class="logo-name">E-Raport</span>
+            <a href="<?= base_url('home'); ?>"> <img alt="image" src="/img/default.svg" class="header-logo" /> <span class="logo-name">E-Raport</span>
             </a>
           </div>
           <ul class="sidebar-menu">
-            <li class="dropdown">
-              <a href="/" class="nav-link"><i class="fas fa-tv"></i> <span>Dashboard</span></a>
+            <li class="nav-item <?= $request->uri->getPath() == 'home' ? 'active' : ''; ?>">
+              <a href="<?= base_url('home') ?>" class="nav-link"><i class="fas fa-tv"></i> <span>Dashboard</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/guru" class="nav-link"><i class="fas fa-user-alt"></i> <span>Data Guru</span></a>
+            <li class="nav-item <?= $request->uri->getPath() == 'guru' ? 'active' : ($request->uri->getPath() == 'guru/create' ? 'active' : ''); ?>">
+              <a href="<?= base_url('guru'); ?>" class="nav-link"><i class="fas fa-user-alt"></i> <span>Data Guru</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/walas" class="nav-link"><i class="fas fa-server"></i> <span>Data Wali Kelas</span></a>
+            <li class="nav-item <?= $request->uri->getPath() == 'walas' ? 'active' : ($request->uri->getPath() == 'walas/create' ? 'active' : ''); ?>">
+              <a href="<?= base_url('walas'); ?>" class="nav-link"><i class="fas fa-server"></i> <span>Data Wali Kelas</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/siswa" class="nav-link"><i class="fas fa-user-graduate"></i> <span>Data Siswa</span></a>
+            <li class="nav-item <?= $request->uri->getPath() == 'siswa' ? 'active' : ($request->uri->getPath() == 'siswa/create' ? 'active' : ''); ?>">
+              <a href="<?= base_url('siswa'); ?>" class="nav-link"><i class="fas fa-user-graduate"></i> <span>Data Siswa</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/kelas" class="nav-link"><i class="fas fa-building"></i> <span>Data Kelas</span></a>
+            <li class="nav-item <?= $request->uri->getPath() == 'kelas' ? 'active' : ($request->uri->getPath() == 'kelas/create' ? 'active' : ''); ?>">
+              <a href="<?= base_url('kelas'); ?>" class="nav-link"><i class="fas fa-building"></i> <span>Data Kelas</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/mapel" class="nav-link"><i class="fas fa-book"></i> <span>Data Mapel</span></a>
+            <li class="nav-item <?= $request->uri->getPath() == 'mapel' ? 'active' : ($request->uri->getPath() == 'mapel/create' ? 'active' : ''); ?>">
+              <a href="<?= base_url('mapel'); ?>" class="nav-link"><i class="fas fa-book"></i> <span>Data Mapel</span></a>
             </li>
-            <li class="dropdown">
-              <a href="/ekskul" class="nav-link"><i class="fas fa-futbol"></i> <span>Data Ekskul</span></a>
+            <li class="nav-item <?= $request->uri->getPath() == 'ekskul' ? 'active' : ($request->uri->getPath() == 'ekskul/create' ? 'active' : ''); ?>">
+              <a href="<?= base_url('ekskul'); ?>" class="nav-link"><i class="fas fa-futbol"></i> <span>Data Ekskul</span></a>
             </li>
           </ul>
         </aside>
@@ -103,6 +105,7 @@
   <script src="/bundles/sweetalert/sweetalert2.min.js"></script>
   <script src="/js/page/index.js"></script>
   <script src="/js/page/datatables.js"></script>
+  <!-- <script src="/js/page/advance-table.js"></script> -->
   <!-- <script src="/js/page/forms-advanced-forms.js"></script> -->
   <script src="/js/page/sweetalert.js"></script>
   <!-- Template JS File -->

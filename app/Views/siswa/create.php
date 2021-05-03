@@ -44,8 +44,8 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control selectric" name="jk_siswa" required>
-                    <option value="">- Pilih -</option>
+                  <select class="form-control selectric" name="jk_siswa">
+                    <option value="">Pilih</option>
                     <option value="Laki-Laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
                   </select>
@@ -66,8 +66,8 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Agama</label>
-                  <select class="form-control selectric" name="agama" required>
-                    <option value="">- Pilih -</option>
+                  <select class="form-control selectric" name="agama">
+                    <option value="">Pilih</option>
                     <?php foreach ($agama as $a) : ?>
                       <option value="<?= $a['agama']; ?>"><?= $a['agama']; ?></option>
                     <?php endforeach ?>
@@ -139,7 +139,7 @@
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_siswa')) ? 'is-invalid' : ''; ?>" name="foto_siswa" id="foto_siswa" value="<?= old('foto_siswa'); ?>" onchange="previewImgSiswa()">
+                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_siswa')) ? 'is-invalid' : ''; ?>" name="foto_siswa" id="foto_siswa" onchange="previewImgSiswa()">
                         <label class="custom-file-label" for="foto_siswa">Pilih Gambar..</label>
                         <div class="invalid-feedback" style="padding-top: 5px;">
                           <?= $validation->getError('foto_siswa'); ?>

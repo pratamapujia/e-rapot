@@ -27,7 +27,7 @@ class Mapel extends BaseController
     //Generate auto number
     $kode = $this->mapelModel->autonumber();
     $no = substr($kode, 3, 4) + 1;
-    $autonumber = "MPL" . sprintf("%04s", $no);
+    $autonumber = "MPL" . sprintf("%02s", $no);
 
 
     $data = [
@@ -47,6 +47,12 @@ class Mapel extends BaseController
         'rules' => 'required',
         'errors' => [
           'required' => 'Nama Mapel wajib diisi'
+        ]
+      ],
+      'jenis_mapel' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih salah satu'
         ]
       ],
       'singkatan' => [

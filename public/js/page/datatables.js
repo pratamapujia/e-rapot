@@ -33,11 +33,11 @@ $("#table-1").dataTable({
     { "sortable": false, "targets": [2, 3] }
   ]
 });
-$("#table-2").dataTable({
+$("#mytable").dataTable({
   "columnDefs": [
-    { "sortable": false, "targets": [0, 2, 3] }
+    { "sortable": false, "targets": [1] }
   ],
-  order: [[1, "asc"]] //column indexes is zero based
+  order: [[0, "desc"]] //column indexes is zero based
 
 });
 $('#save-stage').DataTable({

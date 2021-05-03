@@ -18,4 +18,11 @@ class EkskulModel extends model
 
     return $this->where(['id_ekskul' => $id_ekskul])->first();
   }
+
+  public function autonumber()
+  {
+    $cd = $this->db->query("SELECT MAX(id_ekskul) AS kode FROM ekskul");
+    $kd = $cd->getrow();
+    return $kd->kode;
+  }
 }

@@ -20,22 +20,26 @@
                 </div>
                 <div class="form-group col-md-12">
                   <label>Jenis Mata Pelajaran</label>
-                  <select class="form-control selectric" name="jenis_mapel">
+                  <select class="form-control selectric <?= ($validation->hasError('jenis_mapel')) ? 'is-invalid' : ''; ?>" name="jenis_mapel">
+                    <option value="">Pilih</option>
                     <option value="Umum">Umum</option>
                     <option value="Mulok">Mulok</option>
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('jenis_mapel'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-12">
                   <label>Nama Mapel</label>
                   <input type="text" class="form-control <?= ($validation->hasError('nama_mapel')) ? 'is-invalid' : ''; ?>" name="nama_mapel">
-                  <div class="infalid-feedback">
+                  <div class="invalid-feedback">
                     <?= $validation->getError('nama_mapel'); ?>
                   </div>
                 </div>
                 <div class="form-group col-md-12">
                   <label>Singkatan</label>
                   <input type="text" class="form-control <?= ($validation->hasError('singkatan')) ? 'is-invalid' : ''; ?>" name="singkatan">
-                  <div class="infalid-feedback">
+                  <div class="invalid-feedback">
                     <?= $validation->getError('singkatan'); ?>
                   </div>
                 </div>

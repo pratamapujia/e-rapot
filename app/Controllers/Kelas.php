@@ -48,9 +48,10 @@ class Kelas extends BaseController
       //   ]
       // ],
       'nama_kelas' => [
-        'rules' => 'required',
+        'rules' => 'required|is_unique[kelas.nama_kelas]',
         'errors' => [
-          'required' => 'Nama kelas wajib diisi'
+          'required' => 'Nama kelas wajib diisi',
+          'is_unique' => 'Nama kelas sudah ada'
         ]
       ]
     ])) {
@@ -61,6 +62,7 @@ class Kelas extends BaseController
     $this->kelasModel->insert([
       'id_kelas' => $this->request->getPost('id_kelas'),
       'tingkat' => $this->request->getPost('tingkat'),
+      'jurusan' => $this->request->getPost('jurusan'),
       'nama_kelas' => $this->request->getPost('nama_kelas')
     ]);
 
@@ -118,6 +120,7 @@ class Kelas extends BaseController
     $this->kelasModel->save([
       'id_kelas' => $id_kelas,
       'tingkat' => $this->request->getVar('tingkat'),
+      'jurusan' => $this->request->getVar('jurusan'),
       'nama_kelas' => $this->request->getVar('nama_kelas')
     ]);
 

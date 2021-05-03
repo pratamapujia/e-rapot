@@ -14,10 +14,18 @@ class Guru extends BaseController
   }
   public function index()
   {
+    //cari data guru
+    $cari = $this->request->getVar('cari');
+    if ($cari) {
+      $guru = $this->guruModel->search($cari);
+    } else {
+      $guru = $this->guruModel;
+    }
+
     // $guru = $this->guruModel->findAll();
     $data = [
       'title' => 'Guru',
-      'guru' => $this->guruModel->getGuru()
+      'guru' => $guru->getGuru()
     ];
     return view('guru/index', $data);
   }
@@ -93,12 +101,30 @@ class Guru extends BaseController
         ]
       ],
       'foto_guru' => [
-        'rules' => 'uploaded[foto_guru]|max_size[foto_guru,2048]|is_image[foto_guru]|mime_in[foto_guru,image/jpg,image/jpeg,image/png]',
+        'rules' => 'uploaded[foto_guru]|max_size[foto_guru,1024]|is_image[foto_guru]|mime_in[foto_guru,image/jpg,image/jpeg,image/png]',
         'errors' => [
           'uploaded' => 'Foto guru wajib diisi',
-          'max_size' => 'Ukuran gambar terlalu besar (max 2mb)',
+          'max_size' => 'Ukuran gambar terlalu besar (max 1mb)',
           'is_image' => 'File yang anda pilih bukan gambar',
           'mime_in' => 'File yang anda pilih bukan gambar'
+        ]
+      ],
+      'jk_guru' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih salah satu'
+        ]
+      ],
+      'profesi' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih salah satu'
+        ]
+      ],
+      'status' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih salah satu'
         ]
       ]
     ])) {
@@ -200,9 +226,9 @@ class Guru extends BaseController
         ]
       ],
       'foto_guru' => [
-        'rules' => 'max_size[foto_guru,2048]|is_image[foto_guru]|mime_in[foto_guru,image/jpg,image/jpeg,image/png]',
+        'rules' => 'max_size[foto_guru,1024]|is_image[foto_guru]|mime_in[foto_guru,image/jpg,image/jpeg,image/png]',
         'errors' => [
-          'max_size' => 'Ukuran gambar terlalu besar (max 2mb)',
+          'max_size' => 'Ukuran gambar terlalu besar (max 1mb)',
           'is_image' => 'File yang anda pilih bukan gambar',
           'mime_in' => 'File yang anda pilih bukan gambar'
         ]

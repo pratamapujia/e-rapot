@@ -23,13 +23,18 @@
                 </div>
                 <div class="form-group col-md-12">
                   <label>Tingkat Kelas</label>
-                  <select class="form-control" name="tingkat">
-                    <option value="1">Kelas 1</option>
-                    <option value="2">Kelas 2</option>
-                    <option value="3">Kelas 3</option>
-                    <option value="4">Kelas 4</option>
-                    <option value="5">Kelas 5</option>
-                    <option value="6">Kelas 6</option>
+                  <select class="form-control selectric" name="tingkat">
+                    <option value="1" <?= $kelas['tingkat'] == "1" ? "selected" : null; ?>>Kelas 10</option>
+                    <option value="2" <?= $kelas['tingkat'] == "2" ? "selected" : null; ?>>Kelas 11</option>
+                    <option value="3" <?= $kelas['tingkat'] == "3" ? "selected" : null; ?>>Kelas 12</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-12">
+                  <label>Jurusan</label>
+                  <select class="form-control selectric" name="tingkat">
+                    <option value="TKR" <?= $kelas['tingkat'] == "TKR" ? "selected" : null; ?>>TKR</option>
+                    <option value="TKJ" <?= $kelas['tingkat'] == "TKJ" ? "selected" : null; ?>>TKJ</option>
+                    <option value="RPL" <?= $kelas['tingkat'] == "RPL" ? "selected" : null; ?>>RPL</option>
                   </select>
                 </div>
                 <div class="form-group col-md-12">

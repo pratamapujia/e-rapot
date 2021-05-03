@@ -20,6 +20,7 @@ class Siswa extends BaseController
       'title' => 'Siswa',
       'siswa' => $this->siswaModel->getSiswa()
     ];
+    // dd($data);
     return view('siswa/index', $data);
   }
 
@@ -42,7 +43,7 @@ class Siswa extends BaseController
     //Generate auto number
     $kode = $this->siswaModel->autonumber();
     $no = substr($kode, 3, 4) + 1;
-    $autonumber = "SWA" . sprintf("%04s", $no);
+    $autonumber = "SWA" . sprintf("%03s", $no);
 
     $data = [
       'title' => 'Form Tambah Data',
@@ -147,6 +148,27 @@ class Siswa extends BaseController
         'errors' => [
           'required' => 'Telepon orang tua wajib diisi.',
           'numeric' => 'Telepon orang tua harus angka'
+        ]
+      ],
+      'jk_siswa' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih salah satu'
+        ]
+      ],
+      'agama' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih salah satu'
+        ]
+      ],
+      'foto_siswa' => [
+        'rules' => 'uploaded[foto_siswa]|max_size[foto_siswa,1024]|is_image[foto_siswa]|mime_in[foto_siswa,image/jpg,image/jpeg,image/png]',
+        'errors' => [
+          'uploaded' => 'Foto siswa wajib diisi',
+          'max_size' => 'Ukuran gambar terlalu besar (max 1mb)',
+          'is_image' => 'File yang anda pilih bukan gambar',
+          'mime_in' => 'File yang anda pilih bukan gambar'
         ]
       ]
     ])) {
@@ -312,7 +334,7 @@ class Siswa extends BaseController
         ]
       ],
       'foto_siswa' => [
-        'rules' => 'max_size[foto_siswa,2048]|is_image[foto_siswa]|mime_in[foto_siswa,image/jpg,image/jpeg,image/png]',
+        'rules' => 'max_size[foto_siswa,1024]|is_image[foto_siswa]|mime_in[foto_siswa,image/jpg,image/jpeg,image/png]',
         'errors' => [
           'max_size' => 'Ukuran gambar terlalu besar (max 2mb)',
           'is_image' => 'File yang anda pilih bukan gambar',

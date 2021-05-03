@@ -37,10 +37,14 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control selectric" name="jk_guru">
+                  <select class="form-control selectric <?= ($validation->hasError('jk_guru')) ? 'is-invalid' : ''; ?>" name="jk_guru">
+                    <option value="">Pilih</option>
                     <option value="Laki-Laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('jk_guru'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nomor Telepon</label>
@@ -51,17 +55,25 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Profesi</label>
-                  <select class="form-control selectric" name="profesi">
+                  <select class="form-control selectric<?= ($validation->hasError('profesi')) ? 'is-invalid' : ''; ?>" name="profesi">
+                    <option value="">Pilih</option>
                     <option value="Guru Biasa">Guru Biasa</option>
                     <option value="Guru BK">Guru BK</option>
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('profesi'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Status</label>
-                  <select class="form-control selectric" name="status">
+                  <select class="form-control selectric<?= ($validation->hasError('status')) ? 'is-invalid' : ''; ?>" name="status">
+                    <option value="">Pilih</option>
                     <option value="Aktif">Aktif</option>
                     <option value="Tidak Aktif">Tidak Aktif</option>
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('status'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Alamat</label>
@@ -78,7 +90,7 @@
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_guru')) ? 'is-invalid' : ''; ?>" name="foto_guru" id="foto_guru" onchange="previewImgGuru()">
+                        <input type="file" class="custom-file-input <?= ($validation->hasError('foto_guru')) ? 'is-invalid' : ''; ?>" name="foto_guru" id="foto_guru" value="<?= old('foto_guru'); ?>" onchange="previewImgGuru()">
                         <label class="custom-file-label" for="foto_guru">Pilih Gambar..</label>
                         <div class="invalid-feedback" style="padding-top: 5px;">
                           <?= $validation->getError('foto_guru'); ?>

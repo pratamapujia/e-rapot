@@ -25,4 +25,9 @@ class GuruModel extends Model
     $kd = $cd->getRow();
     return $kd->kode;
   }
+
+  public function search($cari)
+  {
+    return $this->table('guru')->like('nama_guru', $cari);
+  }
 }
