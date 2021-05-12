@@ -49,12 +49,14 @@
                 <div class="author-box-name">
                   <a><?= $g['nama_guru']; ?></a>
                 </div>
-                <div class="author-box-job"><?= $g['status']; ?></div>
+                <div class="author-box-job"><?= $g['status'] == 'Aktif' ? "<div class='text-success'><i class='fas fa-check-circle'></i></div>" : "<div class='text-danger'><i class='fas fa-times-circle'></i></div>"; ?></div>
                 <div class="mb-2 mt-3">
-                  <div class="text font-weight-bold"><?= $g['telepon_guru']; ?></div>
+                  <div class="text font-weight-bold">
+                    <i class="fas fa-phone"></i> <?= $g['telepon_guru']; ?>
+                  </div>
                 </div>
                 <div class="author-box-job">
-                  <i class="fas fa-map-marker-alt"> <?= $g['alamat_guru']; ?></i>
+                  <i class="fas fa-map-marker-alt"></i> <?= $g['alamat_guru']; ?>
                 </div>
               </div>
             </div>

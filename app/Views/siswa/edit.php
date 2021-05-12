@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control selectric" name="jk_siswa" required>
+                  <select class="form-control selectric" name="jk_siswa">
                     <option value="Laki-Laki" <?= $siswa['jk_siswa'] == "Laki-Laki" ? "selected" : null; ?>>Laki-Laki</option>
                     <option value="Perempuan" <?= $siswa['jk_siswa'] == "Perempuan" ? "selected" : null; ?>>Perempuan</option>
                   </select>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Agama</label>
-                  <select class="form-control selectric" name="agama" required>
+                  <select class="form-control selectric" name="agama">
                     <?php foreach ($agama as $a) : ?>
                       <option value="<?= $a['agama'] ?>" <?= $a['agama'] == $siswa['agama'] ? "selected" : null; ?>><?= $a['agama']; ?></option>
                     <?php endforeach ?>

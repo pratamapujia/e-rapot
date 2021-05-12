@@ -37,7 +37,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control selectric <?= ($validation->hasError('jk_guru')) ? 'is-invalid' : ''; ?>" name="jk_guru">
+                  <select class="form-control <?= ($validation->hasError('jk_guru')) ? 'is-invalid' : ''; ?>" name="jk_guru">
                     <option value="">Pilih</option>
                     <option value="Laki-Laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Profesi</label>
-                  <select class="form-control selectric<?= ($validation->hasError('profesi')) ? 'is-invalid' : ''; ?>" name="profesi">
+                  <select class="form-control <?= ($validation->hasError('profesi')) ? 'is-invalid' : ''; ?>" name="profesi">
                     <option value="">Pilih</option>
                     <option value="Guru Biasa">Guru Biasa</option>
                     <option value="Guru BK">Guru BK</option>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Status</label>
-                  <select class="form-control selectric<?= ($validation->hasError('status')) ? 'is-invalid' : ''; ?>" name="status">
+                  <select class="form-control <?= ($validation->hasError('status')) ? 'is-invalid' : ''; ?>" name="status">
                     <option value="">Pilih</option>
                     <option value="Aktif">Aktif</option>
                     <option value="Tidak Aktif">Tidak Aktif</option>

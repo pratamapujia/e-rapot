@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control selectric" selected="<?= $guru['jk_guru']; ?>" name="jk_guru">
+                  <select class="form-control" selected="<?= $guru['jk_guru']; ?>" name="jk_guru">
                     <option value="Laki-Laki" <?= $guru['jk_guru'] == "Laki-Laki" ? "selected" : null; ?>>Laki-Laki</option>
                     <option value="Perempuan" <?= $guru['jk_guru'] == "Perempuan" ? "selected" : null; ?>>Perempuan</option>
                   </select>
@@ -52,14 +52,14 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Profesi</label>
-                  <select class="form-control selectric" selected="<?= $guru['profesi']; ?>" name="profesi">
+                  <select class="form-control" selected="<?= $guru['profesi']; ?>" name="profesi">
                     <option value="Guru Biasa" <?= $guru['profesi'] == "Guru Biasa" ? "selected" : null; ?>>Guru Biasa</option>
                     <option value="Guru BK" <?= $guru['profesi'] == "Guru BK" ? "selected" : null; ?>>Guru BK</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Status</label>
-                  <select class="form-control selectric" selected="<?= $guru['status']; ?>" name="status">
+                  <select class="form-control" selected="<?= $guru['status']; ?>" name="status">
                     <option value="Aktif">Aktif</option>
                     <option value="Tidak Aktif">Tidak Aktif</option>
                   </select>

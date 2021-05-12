@@ -20,7 +20,8 @@
                 </div>
                 <div class="form-group col-md-12">
                   <label>Jenis Mata Pelajaran</label>
-                  <select class="form-control selectric" name="jenis_mapel">
+                  <select class="form-control" name="jenis_mapel">
+                    <option value=""> Pilih </option>
                     <option value="Umum" <?= $mapel['jenis_mapel'] == "Umum" ? "selected" : null; ?>>Umum</option>
                     <option value="Mulok" <?= $mapel['jenis_mapel'] == "Mulok" ? "selected" : null; ?>>Mulok</option>
                   </select>

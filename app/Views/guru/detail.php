@@ -17,7 +17,7 @@
                 <div class="author-box-name">
                   <h4><?= $guru['nama_guru']; ?></h4>
                 </div>
-                <div class="author-box-job" style="color: red;"><?= $guru['status']; ?></div><br>
+                <div class="author-box-job"><?= $guru['status'] == 'Aktif' ? "<div class='text-success'>Aktif</div>" : "<div class='text-danger'>Tidak Aktif</div>"; ?></div><br>
                 <dl class="row">
                   <dt class="col-sm-3">
                     ID Guru

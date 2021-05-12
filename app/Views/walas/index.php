@@ -45,21 +45,15 @@
                     <tr>
                       <td class="text-left"><a href="/guru/detail/<?= $w['id_guru']; ?>"><?= $w['id_walas']; ?></a></td>
                       <td>
-                        <img alt="image" src="/img/fguru/<?= $w['foto_guru']; ?>" width="35">
+                        <img alt="image" src="/img/fguru/<?= $w['foto_guru'] == null ? "none.png" : $w['foto_guru']; ?>" width="35">
                       </td>
-                      <td class="text-left"><?= $w['nip']; ?></td>
-                      <td class="text-left"><?= $w['nama_guru']; ?></td>
+                      <td class="text-left"><?= $w['nip'] == null ? "<div class='badge badge-danger'>Kosong</div>" : $w['nip']; ?></td>
+                      <td class="text-left"><?= $w['nama_guru'] == null ? "<div class='badge badge-danger'>Kosong</div>" : $w['nama_guru']; ?></td>
                       <td class="text-left"><?= $w['nama_mapel'] == null ? "<div class='badge badge-danger'>Kosong</div>" : $w['nama_mapel'] ?></td>
                       <td class="text-left"><?= $w['nama_kelas'] == null ? "<div class='badge badge-danger'>Kosong</div>" : $w['nama_kelas'] ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <!-- <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/walas/<?= $w['id_walas']; ?>" style="padding-top: 6px;"><i class="fas fa-eye"></i></a> -->
                           <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/walas/edit/<?= $w['id_walas']; ?>"><i class="fas fa-edit"></i></a>
-                          <!-- <form action="/walas/<?= $w['id_walas']; ?>" method="POST">
-                            <?= csrf_field(); ?>
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" data-toggle="tooltip" data-placement="left" title="Hapus" class="btn btn-icon btn-danger" onclick="return confirm('apakah anda yakin mau menghapus data ini !!!')"><i class="fas fa-trash"></i></button>
-                          </form> -->
                           <a href="/walas/delete/<?= $w['id_walas']; ?>" class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>

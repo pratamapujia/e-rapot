@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Nama Guru</label>
-                  <select class="form-control selectric" name="id_guru" required>
+                  <select class="form-control" name="id_guru">
                     <option>Pilih Guru</option>
                     <?php foreach ($guru as $g) : ?>
                       <option value="<?= $g['id_guru']; ?>" <?= $g['id_guru'] == $walas['id_guru'] ? "selected" : null; ?>><?= $g['nama_guru']; ?></option>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Mengampu Mapel</label>
-                  <select class="form-control selectric" name="id_mapel" required>
+                  <select class="form-control" name="id_mapel">
                     <option>Pilih Mapel</option>
                     <?php foreach ($mapel as $m) : ?>
                       <option value="<?= $m['id_mapel']; ?>" <?= $m['id_mapel'] == $walas['id_mapel'] ? "selected" : null; ?>><?= $m['nama_mapel']; ?></option>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Wali Kelas</label>
-                  <select class="form-control selectric" name="id_kelas" required>
+                  <select class="form-control" name="id_kelas">
                     <option>Pilih Kelas</option>
                     <?php foreach ($kelas as $k) : ?>
                       <option value="<?= $k['id_kelas']; ?>" <?= $k['id_kelas'] == $walas['id_kelas'] ? "selected" : null; ?>><?= $k['nama_kelas']; ?></option>

@@ -40,18 +40,23 @@ class Kelas extends BaseController
   {
     // Validasi input
     if (!$this->validate([
-      // 'id_kelas' => [
-      //   'rules' => 'required|is_unique[kelas.id_kelas]',
-      //   'errors' => [
-      //     'required' => 'ID Kelas wajib diisi',
-      //     'is_unique' => 'ID Kelas sudah ada'
-      //   ]
-      // ],
       'nama_kelas' => [
         'rules' => 'required|is_unique[kelas.nama_kelas]',
         'errors' => [
           'required' => 'Nama kelas wajib diisi',
           'is_unique' => 'Nama kelas sudah ada'
+        ]
+      ],
+      'tingkat' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih Salah satu'
+        ]
+      ],
+      'jurusan' => [
+        'rules' => 'required',
+        'errors' => [
+          'required' => 'Pilih Salah satu'
         ]
       ]
     ])) {

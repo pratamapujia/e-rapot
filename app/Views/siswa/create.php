@@ -44,11 +44,14 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Jenis Kelamin</label>
-                  <select class="form-control selectric" name="jk_siswa">
+                  <select class="form-control <?= ($validation->hasError('jk_siswa')) ? 'is-invalid' : ''; ?>" name="jk_siswa">
                     <option value="">Pilih</option>
                     <option value="Laki-Laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('jk_siswa'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Tempat Lahir</label>
@@ -66,17 +69,15 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label>Agama</label>
-                  <select class="form-control selectric" name="agama">
+                  <select class="form-control <?= ($validation->hasError('agama')) ? 'is-invalid' : ''; ?>" name="agama">
                     <option value="">Pilih</option>
                     <?php foreach ($agama as $a) : ?>
                       <option value="<?= $a['agama']; ?>"><?= $a['agama']; ?></option>
                     <?php endforeach ?>
-                    <!-- <option value="Kristen">Kristen</option>
-                    <option value="Katholik">Katholik</option>
-                    <option value="Buddha">Buddha</option>
-                    <option value="Hindu">Hindu</option>
-                    <option value="Konghucu">Khonghucu</option> -->
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('agama'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label>Alamat Siswa</label>

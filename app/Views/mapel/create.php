@@ -20,8 +20,8 @@
                 </div>
                 <div class="form-group col-md-12">
                   <label>Jenis Mata Pelajaran</label>
-                  <select class="form-control selectric <?= ($validation->hasError('jenis_mapel')) ? 'is-invalid' : ''; ?>" name="jenis_mapel">
-                    <option value="">Pilih</option>
+                  <select class="form-control <?= ($validation->hasError('jenis_mapel')) ? 'is-invalid' : ''; ?>" name="jenis_mapel">
+                    <option value=""> Pilih </option>
                     <option value="Umum">Umum</option>
                     <option value="Mulok">Mulok</option>
                   </select>

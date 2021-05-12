@@ -23,19 +23,27 @@
                 </div>
                 <div class="form-group col-md-12">
                   <label>Tingkat Kelas</label>
-                  <select class="form-control selectric" name="tingkat">
+                  <select class="form-control <?= ($validation->hasError('tingkat')) ? 'is-invalid' : ''; ?>" name="tingkat">
+                    <option value=""> Pilih </option>
                     <option value="1">Kelas 10</option>
                     <option value="2">Kelas 11</option>
                     <option value="3">Kelas 12</option>
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('tingkat'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-12">
                   <label>Jurusan</label>
-                  <select class="form-control selectric" name="tingkat">
+                  <select class="form-control <?= ($validation->hasError('jurusan')) ? 'is-invalid' : ''; ?>" name="jurusan">
+                    <option value=""> Pilih </option>
                     <option value="TKR">TKR</option>
                     <option value="TKJ">TKJ</option>
                     <option value="RPL">RPL</option>
                   </select>
+                  <div class="invalid-feedback">
+                    <?= $validation->getError('jurusan'); ?>
+                  </div>
                 </div>
                 <div class="form-group col-md-12">
                   <label>Nama Kelas</label>
