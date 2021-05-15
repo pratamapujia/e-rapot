@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Data Ekstrakulikuler</h4>
             <div class="card-header-action">
-              <a href="/ekskul/create" class="btn btn-primary">
+              <a href="<?= base_url(); ?>/ekskul/create" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Tambah Data Kelas
               </a>
             </div>
@@ -18,7 +18,7 @@
           <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-striped" id="save-stage" style="width:100%;">
+              <table class="table table-striped" id="mytable2" style="width:100%;">
                 <thead>
                   <tr>
                     <th class="text-left">ID Ekskul</th>
@@ -33,8 +33,8 @@
                       <td class="text-left"><?= $e['nama_ekskul']; ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/ekskul/edit/<?= $e['id_ekskul']; ?>"><i class="fas fa-edit"></i></a>
-                          <a class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus" href="/ekskul/delete/<?= $e['id_ekskul']; ?>"><i class="fas fa-trash"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="<?= base_url(); ?>/ekskul/edit/<?= $e['id_ekskul']; ?>"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus" href="<?= base_url(); ?>/ekskul/delete/<?= $e['id_ekskul']; ?>"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

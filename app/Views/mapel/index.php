@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Data Mata Pelajaran</h4>
             <div class="card-header-action">
-              <a href="/mapel/create" class="btn btn-primary">
+              <a href="<?= base_url(); ?>/mapel/create" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Tambah Data Mapel
               </a>
             </div>
@@ -26,7 +26,7 @@
           <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-striped" id="save-stage" style="width:100%;">
+              <table class="table table-striped" id="mytable2" style="width:100%;">
                 <thead>
                   <tr>
                     <th class="text-left">ID Mapel</th>
@@ -45,8 +45,8 @@
                       <td class="text-left"><?= $m['singkatan']; ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/mapel/edit/<?= $m['id_mapel']; ?>"><i class="fas fa-edit"></i></a>
-                          <a class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus" href="/mapel/delete/<?= $m['id_mapel']; ?>"><i class="fas fa-trash"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="<?= base_url(); ?>/mapel/edit/<?= $m['id_mapel']; ?>"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus" href="<?= base_url(); ?>/mapel/delete/<?= $m['id_mapel']; ?>"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

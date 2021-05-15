@@ -33,6 +33,7 @@ $("#table-1").dataTable({
     { "sortable": false, "targets": [2, 3] }
   ]
 });
+
 $("#mytable").dataTable({
   "columnDefs": [
     { "sortable": false, "targets": [1] }
@@ -40,10 +41,23 @@ $("#mytable").dataTable({
   order: [[0, "desc"]] //column indexes is zero based
 
 });
+$("#mytable2").dataTable({
+  order: [[0, "desc"]] //column indexes is zero based
+
+});
+$("#mytable3").dataTable({
+  dom: 'Bfrtip',
+  buttons: [
+    'copy', 'csv', 'excel', 'pdf', 'print'
+  ],
+  order: [[0, "asc"]] //column indexes is zero based
+
+});
 $('#save-stage').DataTable({
   "scrollX": true,
   stateSave: true
 });
+
 $('#tableExport').DataTable({
   dom: 'Bfrtip',
   buttons: [

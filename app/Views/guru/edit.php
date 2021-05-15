@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Ubah Data Guru</h4>
           </div>
-          <form action="/guru/update/<?= $guru['id_guru']; ?>" method="post" enctype="multipart/form-data">
+          <form action="<?= base_url(); ?>/guru/update/<?= $guru['id_guru']; ?>" method="post" enctype="multipart/form-data">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">
@@ -75,7 +75,7 @@
                   <label>File</label>
                   <div class="row">
                     <div class="form-group col-md-4">
-                      <img src="/img/fguru/<?= $guru['foto_guru']; ?>" class="img-thumbnail img-preview">
+                      <img src="<?= base_url(); ?>/img/fguru/<?= $guru['foto_guru']; ?>" class="img-thumbnail img-preview">
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">

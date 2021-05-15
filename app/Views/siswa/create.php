@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Tambah Data Siswa</h4>
           </div>
-          <form action="/siswa/save" method="post" enctype="multipart/form-data">
+          <form action="<?= base_url(); ?>/siswa/save" method="post" enctype="multipart/form-data">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">
@@ -136,7 +136,7 @@
                   <label>Foto Siswa</label>
                   <div class="row">
                     <div class="form-group col-md-4">
-                      <img src="../img/fsiswa/none.png" class="img-thumbnail img-preview">
+                      <img src="<?= base_url(); ?>/img/fsiswa/none.png" class="img-thumbnail img-preview">
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">

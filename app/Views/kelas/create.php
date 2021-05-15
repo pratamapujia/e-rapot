@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Tambah Data Kelas</h4>
           </div>
-          <form action="/kelas/save" method="POST">
+          <form action="<?= base_url(); ?>/kelas/save" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">

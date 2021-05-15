@@ -18,7 +18,10 @@
           </form>
         </div>
         <div class="card-header-action">
-          <a href="/guru/create" class="btn btn-primary btn-icon icon-left">
+          <a href="#" class="btn btn-danger btn-icon icon-left">
+            <i class="far fa-file-alt"></i> Laporan
+          </a>
+          <a href="<?= base_url(); ?>/guru/create" class="btn btn-primary btn-icon icon-left">
             <i class="fas fa-plus"></i> Tambah Data Guru
           </a>
         </div>
@@ -35,16 +38,16 @@
                 <div class="dropdown">
                   <a data-toggle="dropdown" class="btn"><i class="fas fa-ellipsis-v"></i></a>
                   <div class="dropdown-menu">
-                    <a href="/guru/detail/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-eye"></i>Detail</a>
-                    <a href="/guru/edit/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-edit"></i>Edit</a>
-                    <a href="/guru/delete/<?= $g['id_guru']; ?>" class="dropdown-item has-icon text-danger hapus"><i class="fas fa-trash"></i>Hapus</a>
+                    <a href="<?= base_url(); ?>/guru/detail/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-eye"></i>Detail</a>
+                    <a href="<?= base_url(); ?>/guru/edit/<?= $g['id_guru']; ?>" class="dropdown-item has-icon"><i class="fas fa-edit"></i>Edit</a>
+                    <a href="<?= base_url(); ?>/guru/delete/<?= $g['id_guru']; ?>" class="dropdown-item has-icon text-danger hapus"><i class="fas fa-trash"></i>Hapus</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="card-body">
               <div class="author-box-center">
-                <img src="/img/fguru/<?= $g['foto_guru']; ?>" alt="image" class="rounded author-box-picture" style="width: 100px; height: 130px;">
+                <img src="<?= base_url(); ?>/img/fguru/<?= $g['foto_guru']; ?>" alt="image" class="rounded author-box-picture" style="width: 100px; height: 130px;">
                 <div class="clearfix"></div>
                 <div class="author-box-name">
                   <a><?= $g['nama_guru']; ?></a>

@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Tambah Data Guru</h4>
           </div>
-          <form action="/guru/save" method="post" enctype="multipart/form-data">
+          <form action="<?= base_url(); ?>/guru/save" method="post" enctype="multipart/form-data">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">
@@ -86,7 +86,7 @@
                   <label>Foto Guru</label>
                   <div class="row">
                     <div class="form-group col-md-4">
-                      <img src="../img/fguru/none.png" class="img-thumbnail img-preview">
+                      <img src="<?= base_url(); ?>/img/fguru/none.png" class="img-thumbnail img-preview">
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">

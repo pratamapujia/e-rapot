@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Data Wali Kelas</h4>
             <div class="card-header-action">
-              <a href="/walas/create" class="btn btn-primary btn-icon icon-left">
+              <a href="<?= base_url(); ?>/walas/create" class="btn btn-primary btn-icon icon-left">
                 <i class="fas fa-plus"></i> Tambah Data Wali Kelas
               </a>
             </div>
@@ -43,9 +43,9 @@
                 <tbody>
                   <?php foreach ($walas as $w) : ?>
                     <tr>
-                      <td class="text-left"><a href="/guru/detail/<?= $w['id_guru']; ?>"><?= $w['id_walas']; ?></a></td>
+                      <td class="text-left"><a href="<?= base_url(); ?>/guru/detail/<?= $w['id_guru']; ?>"><?= $w['id_walas']; ?></a></td>
                       <td>
-                        <img alt="image" src="/img/fguru/<?= $w['foto_guru'] == null ? "none.png" : $w['foto_guru']; ?>" width="35">
+                        <img alt="image" src="<?= base_url(); ?>/img/fguru/<?= $w['foto_guru'] == null ? "none.png" : $w['foto_guru']; ?>" width="35">
                       </td>
                       <td class="text-left"><?= $w['nip'] == null ? "<div class='badge badge-danger'>Kosong</div>" : $w['nip']; ?></td>
                       <td class="text-left"><?= $w['nama_guru'] == null ? "<div class='badge badge-danger'>Kosong</div>" : $w['nama_guru']; ?></td>
@@ -53,8 +53,8 @@
                       <td class="text-left"><?= $w['nama_kelas'] == null ? "<div class='badge badge-danger'>Kosong</div>" : $w['nama_kelas'] ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/walas/edit/<?= $w['id_walas']; ?>"><i class="fas fa-edit"></i></a>
-                          <a href="/walas/delete/<?= $w['id_walas']; ?>" class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="<?= base_url(); ?>/walas/edit/<?= $w['id_walas']; ?>"><i class="fas fa-edit"></i></a>
+                          <a href="<?= base_url(); ?>/walas/delete/<?= $w['id_walas']; ?>" class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

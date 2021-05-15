@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Tambah Data Walas</h4>
           </div>
-          <form action="/walas/save" method="post">
+          <form action="<?= base_url(); ?>/walas/save" method="post">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">

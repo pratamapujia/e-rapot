@@ -34,23 +34,28 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->addRedirect('/', 'home');
-$routes->get('/guru/create', 'Guru::create');
-$routes->get('/walas/create', 'Walas::create');
-$routes->get('/siswa/create', 'Siswa::create');
-$routes->get('/kelas/create', 'Kelas::create');
-$routes->get('/mapel/create', 'Mapel::create');
-$routes->get('/guru/edit/(:segment)', 'Guru::edit/$1');
-$routes->get('/siswa/edit/(:segment)', 'Siswa::edit/$1');
-$routes->get('/kelas/edit/(:segment)', 'Kelas::edit/$1');
-$routes->get('/walas/edit/(:segment)', 'Walas::edit/$1');
-$routes->get('/mapel/edit/(:segment)', 'Mapel::edit/$1');
-$routes->delete('/guru/(:alphanum)', 'Guru::delete/$1');
-$routes->delete('/siswa/(:alphanum)', 'Siswa::delete/$1');
-$routes->delete('/walas/(:alphanum)', 'Walas::delete/$1');
-$routes->delete('/kelas/(:alphanum)', 'Kelas::delete/$1');
-$routes->delete('/mapel/(:alphanum)', 'Mapel::delete/$1');
-$routes->get('/guru/(:segment)', 'Guru::detail/$1');
-$routes->get('/siswa/(:segment)', 'Siswa::detail/$1');
+$routes->get('/guru', 'Guru::index', ['filter' => 'role:admin']);
+$routes->get('/walas', 'Walas::index', ['filter' => 'role:admin']);
+$routes->get('/siswa', 'Siswa::index', ['filter' => 'role:admin']);
+$routes->get('/kelas', 'Kelas::index', ['filter' => 'role:admin']);
+$routes->get('/mapel', 'Mapel::index', ['filter' => 'role:admin']);
+$routes->get('/guru/create', 'Guru::create', ['filter' => 'role:admin']);
+$routes->get('/walas/create', 'Walas::create', ['filter' => 'role:admin']);
+$routes->get('/siswa/create', 'Siswa::create', ['filter' => 'role:admin']);
+$routes->get('/kelas/create', 'Kelas::create', ['filter' => 'role:admin']);
+$routes->get('/mapel/create', 'Mapel::create', ['filter' => 'role:admin']);
+$routes->get('/guru/edit/(:segment)', 'Guru::edit/$1', ['filter' => 'role:admin']);
+$routes->get('/siswa/edit/(:segment)', 'Siswa::edit/$1', ['filter' => 'role:admin']);
+$routes->get('/kelas/edit/(:segment)', 'Kelas::edit/$1', ['filter' => 'role:admin']);
+$routes->get('/walas/edit/(:segment)', 'Walas::edit/$1', ['filter' => 'role:admin']);
+$routes->get('/mapel/edit/(:segment)', 'Mapel::edit/$1', ['filter' => 'role:admin']);
+$routes->delete('/guru/(:alphanum)', 'Guru::delete/$1', ['filter' => 'role:admin']);
+$routes->delete('/siswa/(:alphanum)', 'Siswa::delete/$1', ['filter' => 'role:admin']);
+$routes->delete('/walas/(:alphanum)', 'Walas::delete/$1', ['filter' => 'role:admin']);
+$routes->delete('/kelas/(:alphanum)', 'Kelas::delete/$1', ['filter' => 'role:admin']);
+$routes->delete('/mapel/(:alphanum)', 'Mapel::delete/$1', ['filter' => 'role:admin']);
+$routes->get('/guru/(:segment)', 'Guru::detail/$1', ['filter' => 'role:admin']);
+$routes->get('/siswa/(:segment)', 'Siswa::detail/$1', ['filter' => 'role:admin']);
 
 /**
  * --------------------------------------------------------------------

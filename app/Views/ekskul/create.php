@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Tambah Data Ekstrakurikuler</h4>
           </div>
-          <form action="/ekskul/save" method="POST">
+          <form action="<?= base_url(); ?>/ekskul/save" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">

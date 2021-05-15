@@ -10,19 +10,14 @@
           <div class="card-header">
             <h4>Data Siswa</h4>
             <div class="card-header-action">
-              <a href="/siswa/create" class="btn btn-primary btn-icon icon-left">
+              <a href="#" class="btn btn-danger btn-icon icon-left">
+                <i class="far fa-file-alt"></i> Laporan
+              </a>
+              <a href="<?= base_url(); ?>/siswa/create" class="btn btn-primary btn-icon icon-left">
                 <i class="fas fa-plus"></i> Tambah Data Siswa
               </a>
             </div>
           </div>
-          <!-- </?php if (session()->getFlashdata('pesan')) : ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>SUCCESS</strong> </?= session()->getFlashdata('pesan'); ?>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </?php endif; ?> -->
           <div class="swal" data-swal="<?= session()->getFlashdata('pesan'); ?>"></div>
           <div class="card-body">
             <div class="table-responsive">
@@ -47,7 +42,7 @@
                     <tr>
                       <td class="text-left"><?= $s['id_siswa']; ?></td>
                       <td>
-                        <img alt="image" src="/img/fsiswa/<?= $s['foto_siswa']; ?>" width="35">
+                        <img alt="image" src="<?= base_url(); ?>/img/fsiswa/<?= $s['foto_siswa']; ?>" width="35">
                       </td>
                       <td class="text-left"><?= $s['nis']; ?></td>
                       <td class="text-left"><?= $s['nama_siswa']; ?></td>
@@ -57,14 +52,14 @@
                       <td class="text-left"><?= $s['telepon_siswa']; ?></td>
                       <td class="text-left">
                         <div class="btn-group mb-3 btn-group-sm" role="group">
-                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="/siswa/detail/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
-                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="/siswa/edit/<?= $s['id_siswa']; ?>"><i class="fas fa-edit"></i></a>
+                          <a class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="left" title="Detail" href="<?= base_url(); ?>/siswa/detail/<?= $s['id_siswa']; ?>"><i class="fas fa-eye"></i></a>
+                          <a class="btn btn-icon btn-warning" data-toggle="tooltip" data-placement="left" title="Edit" href="<?= base_url(); ?>/siswa/edit/<?= $s['id_siswa']; ?>"><i class="fas fa-edit"></i></a>
                           <!-- <form action="/siswa/<?= $s['id_siswa']; ?>" method="POST">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" data-toggle="tooltip" data-placement="left" title="Hapus" class="btn btn-icon btn-danger"><i class="fas fa-trash"></i></button>
                           </form> -->
-                          <a href="/siswa/delete/<?= $s['id_siswa']; ?>" class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
+                          <a href="<?= base_url(); ?>/siswa/delete/<?= $s['id_siswa']; ?>" class="btn btn-icon btn-danger hapus" data-toggle="tooltip" data-placement="left" title="Hapus"><i class="fas fa-trash"></i></a>
                         </div>
                       </td>
                     </tr>

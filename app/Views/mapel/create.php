@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Tambah Data Mapel</h4>
           </div>
-          <form action="/mapel/save" method="POST">
+          <form action="<?= base_url(); ?>/mapel/save" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">

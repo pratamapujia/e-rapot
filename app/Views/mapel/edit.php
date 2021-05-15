@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Ubah Data Mapel</h4>
           </div>
-          <form action="/mapel/update/<?= $mapel['id_mapel']; ?>" method="POST">
+          <form action="<?= base_url(); ?>/mapel/update/<?= $mapel['id_mapel']; ?>" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">

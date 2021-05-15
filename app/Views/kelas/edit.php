@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Ubah Data Kelas</h4>
           </div>
-          <form action="/kelas/update/<?= $kelas['id_kelas']; ?>" method="POST">
+          <form action="<?= base_url(); ?>/kelas/update/<?= $kelas['id_kelas']; ?>" method="POST">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">

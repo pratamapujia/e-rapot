@@ -10,7 +10,7 @@
           <div class="card-header">
             <h4>Form Ubah Data Siswa</h4>
           </div>
-          <form action="/siswa/update/<?= $siswa['id_siswa']; ?>" method="post" enctype="multipart/form-data">
+          <form action="<?= base_url(); ?>/siswa/update/<?= $siswa['id_siswa']; ?>" method="post" enctype="multipart/form-data">
             <?= csrf_field(); ?>
             <div class="card-body">
               <div class="form-row">
@@ -129,7 +129,7 @@
                   <label>Foto Siswa</label>
                   <div class="row">
                     <div class="form-group col-md-4">
-                      <img src="/img/fsiswa/<?= $siswa['foto_siswa']; ?>" class="img-thumbnail img-preview">
+                      <img src="<?= base_url(); ?>/img/fsiswa/<?= $siswa['foto_siswa']; ?>" class="img-thumbnail img-preview">
                     </div>
                     <div class="col-md-8">
                       <div class="custom-file">

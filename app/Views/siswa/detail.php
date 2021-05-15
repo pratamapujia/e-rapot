@@ -10,7 +10,7 @@
           <div class="card author-box card-primary">
             <div class="card-body">
               <div class="author-box-left"><br>
-                <img alt="image" src="/img/fsiswa/<?= $siswa['foto_siswa']; ?>" class="rounded author-box-picture" style="width: 110px; height: 140px;">
+                <img alt="image" src="<?= base_url(); ?>/img/fsiswa/<?= $siswa['foto_siswa']; ?>" class="rounded author-box-picture" style="width: 110px; height: 140px;">
                 <div class="clearfix"></div>
               </div>
               <div class="author-box-details">
@@ -93,7 +93,7 @@
                   </dd>
                 </dl>
                 <div class="text-right">
-                  <a href="/siswa" class="btn btn-sm btn-primary" type="button">Kembali</a>
+                  <a href="<?= base_url(); ?>/siswa" class="btn btn-sm btn-primary" type="button">Kembali</a>
                 </div>
               </div>
             </div>
